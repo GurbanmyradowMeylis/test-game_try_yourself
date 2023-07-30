@@ -8,27 +8,26 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="form">
-      <form name="GamesForm" id="form">
-        <div class="first-section">
-          <h1 class="title">test Details</h1>
-          <label for="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="meylis gurbanmyradow"
-            autocomplete="off"
-          />
-          <label for="inputOfDificulity">dificulity of test</label>
-          <select name="dificulity" id="inputOfDificulity">
-            <option value="easy">easy</option>
-            <option value="medium">medium</option>
-            <option value="hard">hard</option>
-          </select>
-          <button name="submit" id="submit">Submit</button>
-        </div>
-      </form>
+    <div class="form__wrapper" id="form">
+      <div class="first-section">
+        <h1 class="title">test Details</h1>
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="meylis gurbanmyradow"
+          autocomplete="off"
+          required
+        />
+        <label for="inputOfDificulity">dificulity of test</label>
+        <select name="dificulity" id="inputOfDificulity">
+          <option value="easy">easy</option>
+          <option value="medium">medium</option>
+          <option value="hard">hard</option>
+        </select>
+        <button id="submit">Submit</button>
+      </div>
     </div>
     <section id="displayOfTest">
       <div class="displayOfTest">

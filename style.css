@@ -7,7 +7,7 @@ body {
   box-sizing: border-box;
 }
 
-.form {
+.form__wrapper {
   position: relative;
   display: flex;
   justify-content: center;
