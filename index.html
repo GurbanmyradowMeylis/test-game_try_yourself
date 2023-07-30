@@ -11,22 +11,29 @@
     <div class="form__wrapper" id="form">
       <div class="first-section">
         <h1 class="title">test Details</h1>
-        <label for="name">Name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="meylis gurbanmyradow"
-          autocomplete="off"
-          required
-        />
-        <label for="inputOfDificulity">dificulity of test</label>
-        <select name="dificulity" id="inputOfDificulity">
-          <option value="easy">easy</option>
-          <option value="medium">medium</option>
-          <option value="hard">hard</option>
-        </select>
-        <button id="submit">Submit</button>
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="meylis gurbanmyradow"
+            autocomplete="off"
+            required
+          />
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <label for="inputOfDificulity">dificulity of test</label>
+          <select name="dificulity" q id="inputOfDificulity">
+            <option value="easy">easy</option>
+            <option value="medium">medium</option>
+            <option value="hard">hard</option>
+          </select>
+        </div>
+        <div class="buttons">
+          <button id="signIn" type="button">sign in</button>
+          <button id="signUp" type="button">sign up</button>
+        </div>
       </div>
     </div>
     <section id="displayOfTest">

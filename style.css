@@ -28,7 +28,7 @@ body {
   max-width: 500px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 30px;
   padding: 20px;
 }
 
@@ -41,7 +41,13 @@ select option {
   text-align: center;
 }
 
-#submit {
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+#signIn,
+#signUp {
   font-size: 17px;
   border: none;
   cursor: pointer;
@@ -49,13 +55,11 @@ select option {
   background: #1560bd;
   padding: 8px 25px;
   border-radius: 5px;
-  display: block;
-  margin: 20px auto 10px auto;
   width: 120px;
 }
 
 .displayOfTest {
-  display: flex;
+  display: none;
 }
 
 .split {
