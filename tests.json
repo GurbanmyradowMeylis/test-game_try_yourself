@@ -1,0 +1,304 @@
+{
+  "tests": {
+    "easy": {
+      "correctAnswer": [
+        "He went to school yesterday.",
+        "I was at the cinema yesterday.",
+        "safe",
+        "I play handball in the afternoon.",
+        "The telephone is ringing.",
+        "a useful book",
+        "You have to learn these words by heart."
+      ],
+      "answer": [
+        "Yesterday he has gone to school.",
+        "I have been to the cinema yesterday.",
+        "I was been at the cinema yesterday.",
+        "easy",
+        "comfortable",
+        "I play handball on the afternoon.",
+        "I play handball at the afternoon.",
+        "The telephone is calling.",
+        "The telephone is sounding.",
+        "a English book",
+        "a well book",
+        "You have to learn these words at heart.",
+        "You have to learn these words for heart."
+      ]
+    },
+    "questions": [
+      {
+        "question": "1.What is the answer to this question? Have you seen her?",
+        "answers": [
+          {
+            "answer": "Yes, I did.",
+            "isRight": false
+          },
+          {
+            "answer": "Yes, I saw.",
+            "isRight": false
+          },
+          {
+            "answer": "Yes, I have.",
+            "isRight": true
+          }
+        ]
+      },
+      {
+        "question": "2.Which sentence is correct?",
+        "answers": [
+          {
+            "answer": "He went abroad in business.",
+            "isRight": false
+          },
+          {
+            "answer": "He went abroad for business.",
+            "isRight": false
+          },
+          {
+            "answer": "He went abroad on business.",
+            "isRight": true
+          }
+        ]
+      },
+      {
+        "question": "3.Which phrases is correct?",
+        "answers": [
+          {
+            "answer": "far → worse → worst",
+            "isRight": false
+          },
+          {
+            "answer": "little → more → most",
+            "isRight": false
+          },
+          {
+            "answer": "good → better → best",
+            "isRight": true
+          }
+        ]
+      },
+      {
+        "question": "4.Which sentence is correct?",
+        "answers": [
+          {
+            "answer": "",
+            "isRight": false
+          },
+          {
+            "answer": "2",
+            "isRight": false
+          },
+          {
+            "answer": "3",
+            "isRight": true
+          }
+        ]
+      },
+      {
+        "question": "5.Which sentence is correct?",
+        "answers": [
+          {
+            "answer": "",
+            "isRight": false
+          },
+          {
+            "answer": "2",
+            "isRight": false
+          },
+          {
+            "answer": "3",
+            "isRight": true
+          }
+        ]
+      },
+      {
+        "question": "6.What is the opposite of dangerous?",
+        "answers": [
+          {
+            "answer": "1",
+            "isRight": false
+          },
+          {
+            "answer": "2",
+            "isRight": false
+          },
+          {
+            "answer": "3",
+            "isRight": true
+          }
+        ]
+      },
+      {
+        "question": "7.Which sentences is correct?",
+        "answers": [
+          {
+            "answer": "1",
+            "isRight": false
+          },
+          {
+            "answer": "2",
+            "isRight": false
+          },
+          {
+            "answer": "3",
+            "isRight": true
+          }
+        ]
+      },
+      {
+        "question": "8.Which sentence is correct?",
+        "answers": [
+          {
+            "answer": "1",
+            "isRight": false
+          },
+          {
+            "answer": "2",
+            "isRight": false
+          },
+          {
+            "answer": "3",
+            "isRight": true
+          }
+        ]
+      },
+      {
+        "question": "9.Which phrases is correct?",
+        "answers": [
+          {
+            "answer": "1",
+            "isRight": false
+          },
+          {
+            "answer": "2",
+            "isRight": false
+          },
+          {
+            "answer": "3",
+            "isRight": true
+          }
+        ]
+      },
+      {
+        "question": "10.Which sentence is correct?",
+        "answers": [
+          {
+            "answer": "1",
+            "isRight": false
+          },
+          {
+            "answer": "2",
+            "isRight": false
+          },
+          {
+            "answer": "3",
+            "isRight": true
+          }
+        ]
+      }
+    ],
+    "meduim": {
+      "question": [
+        "1.Which sentence is correct?",
+        "2. I was born .....",
+        "3. Do you mind if I open the window?",
+        "4.Which sentence is correct?",
+        "5. You ..... if you don't want to.",
+        "6.Which sentence is correct?",
+        "7. I'm .....",
+        "8.Which sentence is correct?",
+        "9.Which sentence is correct?",
+        "10.Which sentence is correct?."
+      ],
+      "correctAnswer": [
+        "Where did you have dinner last night?",
+        "No, not at all",
+        "I should stop smoking",
+        "don't have to go",
+        "I really need to talk to her ",
+        "going to take a long walk ",
+        "Are you going to the party on Friday? ",
+        "I'm not working tomorrow ",
+        "Would you rather go to a different movie?"
+      ],
+      "answer": {
+        "first": [
+          "Where have you had dinner last night?",
+          "Where do you have dinner last night?"
+        ],
+        "second": ["before 30 years", "the last thirty years"],
+        "third": ["Yes, that's fantastic", "Don't be silly"],
+        "fourth": ["I should to stop smoking", "I must to stop smoking"],
+        "fifth": ["mustn't to go", "needn't to go"],
+        "sixth": [
+          "I really should to talk to her",
+          "I really must to talk to her"
+        ],
+        "seventh": ["going a long walk", "going taking a long walk"],
+        "eighth": [
+          "Are you going party on Friday?",
+          "Are you going partying on Friday?"
+        ],
+        "nineth": ["I'm not to working tomorrow", "I don't working tomorrow"],
+        "tenth": [
+          "Did you rather go to a different movie?",
+          "Would you didn't go to a different movie?"
+        ]
+      }
+    },
+    "hard": {
+      "question": [
+        "1.Which sentence is correct?",
+        "2.Which sentence is correct?",
+        "3. ... Answer: Yes, just now",
+        "4.Which sentence is correct?",
+        "5.Which sentence is correct?",
+        "6.Which sentence is correct?",
+        "7.Which sentence is correct?",
+        "8.Which sentence is correct?",
+        "9. ... Answer: Thank you, that's very kind ",
+        "10. ... Answer: Yes, in the Autumn"
+      ],
+      "correctAnswer": [
+        "When are you going to go out?",
+        "I'm working tomorrow",
+        "Have you finished your project?",
+        "I usually have some coffee and toast for my breakfast",
+        "I'm trying to eat a healthier diet",
+        "He's never been to New York",
+        "At this rate, they will never be here on time",
+        "Have you studied Chinese before?",
+        "I can do that for you",
+        "Are you going to go to University?"
+      ],
+      "answer": {
+        "first": ["When going out are we?", "When do we go out?"],
+        "second": ["I work tomorrow", "I don't working tomorrow"],
+        "third": [
+          "Did you finish your project?",
+          "Have you got finished your project?"
+        ],
+        "fourth": [
+          "I am usually having some coffee and toast for my breakfast",
+          "I am used to have some coffee and toast for my breakfast"
+        ],
+        "fifth": [
+          "I'm trying to eat a more healthy diet",
+          "I try to eat a more healthy diet"
+        ],
+        "sixth": ["He's never gone to New York", "He's gone often to New York"],
+        "seventh": [
+          "At this rate, they are never here on time",
+          "At this rate, they are never going here on time"
+        ],
+        "eighth": [
+          "Are you studied Chinese before?",
+          "Are you studying Chinese before?"
+        ],
+        "nineth": ["I could do that", "I could to make that for you"],
+        "tenth": ["Are you going to University?", "Do you like University?"]
+      }
+    }
+  }
+}

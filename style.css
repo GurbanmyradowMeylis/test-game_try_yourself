@@ -1,0 +1,131 @@
+body {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.form {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 30px;
+  text-align: center;
+  font-weight: normal;
+}
+
+.first-section {
+  border-radius: 5px;
+  border: 1px solid;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+.first-section input,
+select {
+  padding: 3px;
+}
+
+select option {
+  text-align: center;
+}
+
+#submit {
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background: #1560bd;
+  padding: 8px 25px;
+  border-radius: 5px;
+  display: block;
+  margin: 20px auto 10px auto;
+  width: 120px;
+}
+
+.displayOfTest {
+  display: flex;
+}
+
+.split {
+  height: 100vh;
+}
+
+.left {
+  width: 30%;
+  background-color: rgb(124, 124, 124);
+  border: 5px solid rgb(192, 188, 188);
+}
+
+.right {
+  width: 70%;
+  background-color: rgb(54, 51, 51);
+  overflow: auto;
+}
+
+.split .centered #list:hover {
+  transition: color 1s;
+  color: blue;
+}
+.split .centered #list {
+  display: block;
+}
+
+.split .centered #username,
+#list,
+#whichDificulityChose,
+#howManyTestsPast {
+  transform: translate(0, 200px);
+  text-align: center;
+  font-size: 25px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.answers {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.split .centered h1 {
+  text-align: center;
+}
+
+.answer {
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background: #1560bd;
+  padding: 10px 25px;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto 10px auto;
+  width: 160px;
+  height: 100px;
+  max-width: 200px;
+  max-height: 100px;
+}
+
+.access {
+  background-color: #44c767;
+  border: 4px solid #18ab29;
+  text-shadow: 1px 0px 8px #2f6627;
+}
+.access:hover {
+  background-color: #5cbf2a;
+}
