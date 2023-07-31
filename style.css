@@ -1,12 +1,21 @@
 body {
   scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
 }
+/* ! nullish styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+ul,
+ol {
+  list-style: none;
+}
+/* ! end nullish styles */
+
+/* ! form */
 .form__wrapper {
   position: relative;
   display: flex;
@@ -57,79 +66,153 @@ select option {
   border-radius: 5px;
   width: 120px;
 }
+/* ! end form */
 
-.displayOfTest {
-  display: none;
-}
-
-.split {
-  height: 100vh;
-}
-
-.left {
-  width: 30%;
-  background-color: rgb(124, 124, 124);
-  border: 5px solid rgb(192, 188, 188);
-}
-
-.right {
-  width: 70%;
-  background-color: rgb(54, 51, 51);
-  overflow: auto;
-}
-
-.split .centered #list:hover {
-  transition: color 1s;
-  color: blue;
-}
-.split .centered #list {
-  display: block;
-}
-
-.split .centered #username,
-#list,
-#whichDificulityChose,
-#howManyTestsPast {
-  transform: translate(0, 200px);
-  text-align: center;
-  font-size: 25px;
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.answers {
-  flex-wrap: wrap;
+/* ! info section */
+.info {
+  background-color: red;
+  position: fixed;
+  width: 25vw;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #fff;
   display: flex;
-  flex-direction: row;
+}
+
+.info__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 100%;
+  background-color: #e2e8f0;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 8px rgb(87, 86, 86);
+  gap: 40px;
+}
+
+.info__username {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+/* ! color changing for dificulty */
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.yellow {
+  color: yellow;
+}
+/* ! end color changing for dificulty */
+
+.info__level {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  gap: 5px;
+}
+
+/* ! info's list section */
+
+.info__list {
+  text-align: center;
+}
+
+/* ! changing degree of svg image */
+
+.list__arrow {
+  width: 10px;
+  height: 10px;
+  transform: rotate(0deg);
+  transition: transform 0.5s;
+}
+
+.list__arrow-click {
+  width: 10px;
+  height: 10px;
+  transform: rotate(180deg);
+  transition: transform 0.5s;
+}
+
+/* ! end changing degree of svg image */
+
+.info__list {
+  display: flex;
+  flex-direction: column;
   gap: 20px;
 }
 
-.split .centered h1 {
-  text-align: center;
+.list__lists {
+  display: flex;
+  flex-direction: column;
+  /* padding: 0px 20px; */
+  gap: 10px;
 }
 
-.answer {
-  font-size: 17px;
-  border: none;
+.list__item {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ! list's dropdown */
+.item__user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 10px;
   cursor: pointer;
-  color: white;
-  background: #1560bd;
-  padding: 10px 25px;
-  border-radius: 5px;
-  display: block;
-  margin: 0 auto 10px auto;
-  width: 160px;
-  height: 100px;
-  max-width: 200px;
-  max-height: 100px;
+  transition: background 0.2s;
 }
 
-.access {
-  background-color: #44c767;
-  border: 4px solid #18ab29;
-  text-shadow: 1px 0px 8px #2f6627;
+.item__user-active {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  transition: background 0.2s;
 }
-.access:hover {
-  background-color: #5cbf2a;
+
+.item__user:hover {
+  background-color: #f9f9f9;
+  transition: background 0.2s;
+}
+
+.item__user:active {
+  background-color: #f3f3f3;
+  transition: background 0.2s;
+}
+
+/* ! end list's dropdown  */
+.item__results {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+/* ! end info's list section */
+/* ! end info */
+
+/* ! test section */
+.test {
+  width: 75vw;
+  background-color: white;
+  z-index: 1;
 }

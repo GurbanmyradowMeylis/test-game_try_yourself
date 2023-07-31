@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="form__wrapper" id="form">
+    <!-- <div class="form__wrapper" id="form">
       <div class="first-section">
         <h1 class="title">test Details</h1>
         <div style="display: flex; flex-direction: column; gap: 8px">
@@ -24,7 +24,7 @@
         </div>
         <div style="display: flex; flex-direction: column; gap: 8px">
           <label for="inputOfDificulity">dificulity of test</label>
-          <select name="dificulity" q id="inputOfDificulity">
+          <select name="dificulity" id="inputOfDificulity">
             <option value="easy">easy</option>
             <option value="medium">medium</option>
             <option value="hard">hard</option>
@@ -36,20 +36,42 @@
         </div>
       </div>
     </div>
-    <section id="displayOfTest">
-      <div class="displayOfTest">
-        <div class="split left">
-          <div class="centered">
-            <h1 id="username"></h1>
-            <a href="#table" id="list">open the list</a>
-            <h1 id="whichDificulityChose"></h1>
-            <h1 id="howManyTestsPast">test: 0/10</h1>
+     -->
+    <section
+      id="wrapper"
+      style="display: flex; min-height: 100vh; justify-content: end"
+    >
+      <div class="info">
+        <div class="info__content">
+          <h1 class="info__username">Username</h1>
+          <div class="info__level">
+            <h2 class="info__dificulity">
+              Dificulity: <span class="green">Easy</span>
+            </h2>
+            <h2 class="info__passed">Passed tests: 5/10</h2>
+          </div>
+          <div class="info__list">
+            <h2 class="info__title">User's list</h2>
+            <ol class="list__lists">
+              <li class="list__item">
+                <div class="item__user">
+                  <p>user</p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                    class="list__arrow"
+                  >
+                    <path
+                      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+                    />
+                  </svg>
+                </div>
+              </li>
+            </ol>
           </div>
         </div>
-        <div class="split right">
-          <div class="centered" id="centered"></div>
-        </div>
       </div>
+      <div class="test"></div>
     </section>
     <script src="./app.js" type="module"></script>
   </body>
