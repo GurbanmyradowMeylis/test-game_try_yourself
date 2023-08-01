@@ -70,14 +70,13 @@ select option {
 
 /* ! info section */
 .info {
-  background-color: red;
   position: fixed;
   width: 25vw;
   top: 0;
   left: 0;
   min-height: 100vh;
   padding: 20px;
-  background-color: #fff;
+  background-color: white;
   display: flex;
 }
 
@@ -120,13 +119,11 @@ select option {
 }
 
 /* ! info's list section */
-
 .info__list {
   text-align: center;
 }
 
 /* ! changing degree of svg image */
-
 .list__arrow {
   width: 10px;
   height: 10px;
@@ -140,7 +137,6 @@ select option {
   transform: rotate(180deg);
   transition: transform 0.5s;
 }
-
 /* ! end changing degree of svg image */
 
 .info__list {
@@ -152,7 +148,6 @@ select option {
 .list__lists {
   display: flex;
   flex-direction: column;
-  /* padding: 0px 20px; */
   gap: 10px;
 }
 
@@ -195,8 +190,8 @@ select option {
   background-color: #f3f3f3;
   transition: background 0.2s;
 }
-
 /* ! end list's dropdown  */
+
 .item__results {
   display: flex;
   flex-direction: column;
@@ -215,4 +210,70 @@ select option {
   width: 75vw;
   background-color: white;
   z-index: 1;
+  padding: 20px;
+  display: flex;
+}
+
+.test__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 100%;
+  gap: 20px;
+}
+
+.test__section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.test__buttons {
+  display: flex;
+  gap: 30px;
+}
+
+.test__button {
+  background-color: rgb(37, 37, 197);
+  padding: 7px 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #1976d2;
+  font-size: 17px;
+  font-weight: 500;
+  color: white;
+  transition: all 0.1s;
+}
+
+.test__button:hover {
+  background-color: #1565c0;
+  box-shadow: 0.9px 0.9px 8px rgb(21, 81, 159);
+  transition: all 0.1s;
+}
+
+.test__button:active {
+  background-color: #5c94d3;
+  transition: all 3ms;
+}
+
+.green-answer {
+  font-size: 17px;
+  font-weight: 500;
+  color: white;
+  background-color: #1b7a1f;
+  padding: 7px 14px;
+  cursor: no-drop;
+  border: none;
+  border-radius: 5px;
+}
+
+.red-answer {
+  font-size: 17px;
+  font-weight: 500;
+  color: white;
+  padding: 7px 14px;
+  cursor: no-drop;
+  border: none;
+  border-radius: 5px;
+  background-color: #ae1c4f;
 }
