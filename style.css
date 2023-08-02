@@ -69,6 +69,13 @@ select option {
 /* ! end form */
 
 /* ! info section */
+
+#wrapper {
+  display: none;
+  min-height: 100vh;
+  justify-content: end;
+}
+
 .info {
   position: fixed;
   width: 25vw;
