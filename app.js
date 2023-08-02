@@ -1,5 +1,4 @@
 import data from "./tests.json" assert { type: "json" };
-// let iterator = -1;
 
 let users = [];
 // {
@@ -13,6 +12,8 @@ let users = [];
 let currentUser = "";
 let currentDificulity = "";
 let currentId = 0;
+let currentPoints = 0;
+let passedTest = 0;
 // ! inputs validation
 function validation() {
   let username = document.getElementById("name").value;
@@ -83,12 +84,8 @@ function fromSignIn() {
 }
 
 function startingTest() {
-  let sectionOfTests = document.getElementById("wrapper");
-  let form = document.getElementById("form");
-  form.style.display = "none";
-  sectionOfTests.style.display = "flex";
-  console.log(`username : ${currentUser}; dificulty : ${currentDificulity}`);
   showingQuestions();
+  informationOfUser();
 }
 // ! info dropdown
 let parent__list = document.getElementsByClassName("list__item").item(0);
@@ -132,7 +129,6 @@ parent__list.onclick = () => {
 
 // ! showes tests
 function showingQuestions() {
-  console.log(currentId + "currentid");
   let item = gettingCurrentTest()[currentId];
   let test__content = document.getElementsByClassName("test__content").item(0);
   let test__section = document.createElement("div");
@@ -145,9 +141,7 @@ function showingQuestions() {
   test__section.append(test__question);
 
   let test__buttons = document.createElement("div");
-  let buttonsId = `container-of-buttons-${currentId}`,
-    sectionId = `section-of-questions-and-buttons-${currentId}`;
-  test__section.id = sectionId;
+  let buttonsId = `container-of-buttons-${currentId}`;
   test__buttons.id = buttonsId;
   test__buttons.className = "test__buttons";
 
@@ -156,10 +150,19 @@ function showingQuestions() {
     test__button.className = "test__button";
     test__button.innerText = item1.answer;
     test__button.onclick = () => {
+      // ! checking passed test if right ++
+      if (item1.isRight) {
+        passedTest++;
+        calculatingRightAnswers();
+      }
+      if (item1.isRight) {
+        currentPoints += 3;
+        calculatingRightAnswersOfpoints();
+      }
       answerValidation(buttonsId, currentId);
+      window.location.href = `#container-of-buttons-${currentId}`;
     };
     test__buttons.append(test__button);
-    console.log(item1);
   });
 
   test__section.append(test__buttons);
@@ -180,14 +183,19 @@ function answerValidation(id) {
       children.item(i).className = "red-answer";
     }
   }
-  // ! validating isLast question of test
+  // ?  validating isLast question of test
   if (gettingCurrentTest().length - 1 === currentId) {
+    currentUser = "";
+    currentDificulity = "";
+    currentId = 0;
+    console.log(currentUser);
+    console.log(currentDificulity);
+    console.log(currentId);
     console.log(users);
   } else {
-    // ! increment current id
+    // ? increment current id
     currentId++;
     showingQuestions();
-    console.log(currentId);
   }
 }
 
@@ -203,3 +211,58 @@ function gettingCurrentTest() {
 }
 
 // ! end shower tests and here ends function which is has name : answerValidation()
+
+function informationOfUser() {
+  let sectionOfTests = document.getElementById("wrapper");
+  let form = document.getElementById("form");
+
+  form.style.display = "none";
+  sectionOfTests.style.display = "flex";
+
+  let info__username = document.getElementById("username");
+  let points = document.getElementById("points");
+  let info__dificulity = document.getElementById("dificulity");
+  let info__counterOfPassedTest = document.getElementById("passed");
+  let preparedUsername = currentUser.slice(0, 1).toUpperCase();
+  let preparedDificulity = currentDificulity.slice(0, 1).toUpperCase();
+  let spanOfDificulity = document.createElement("span");
+
+  preparedDificulity += currentDificulity.slice(1);
+  preparedUsername += currentUser.slice(1);
+  spanOfDificulity.innerText = preparedDificulity;
+
+  let answers = eval(
+    `data.tests.${currentDificulity}.questions[${currentId}].answers`
+  );
+
+  colorChanger(spanOfDificulity);
+  info__username.innerText = preparedUsername;
+  info__dificulity.innerText = `Dificulity : `;
+  info__dificulity.append(spanOfDificulity);
+  info__counterOfPassedTest.innerText = `Tests : ${passedTest} / ${
+    gettingCurrentTest().length
+  }`;
+  points.innerText = `Points : ${currentPoints}`;
+  console.log(`username : ${currentUser}; dificulty : ${currentDificulity}`);
+}
+
+function colorChanger(span) {
+  if (currentDificulity == "easy") {
+    span.className = "green";
+  } else if (currentDificulity == "medium") {
+    span.className = "yellow";
+  } else if (currentDificulity == "hard") {
+    span.className = "red";
+  }
+}
+
+// ! calc answers
+function calculatingRightAnswers() {
+  let passed = document.getElementById("passed");
+  passed.innerText = `Tests : ${passedTest} / ${gettingCurrentTest().length}`;
+}
+
+function calculatingRightAnswersOfpoints() {
+  let points = document.getElementById("points");
+  points.innerText = `Points : ${currentPoints}`;
+}
