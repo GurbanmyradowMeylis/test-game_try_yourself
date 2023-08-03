@@ -80,7 +80,7 @@ select option {
   width: 25vw;
   top: 0;
   left: 0;
-  min-height: 100vh;
+  height: 100vh;
   padding: 20px;
   background-color: white;
   display: flex;
@@ -92,6 +92,7 @@ select option {
   flex: 1 1 100%;
   background-color: #e2e8f0;
   padding: 10px;
+  padding-bottom: 20px;
   border-radius: 10px;
   box-shadow: inset 0px 0px 8px rgb(87, 86, 86);
   gap: 40px;
@@ -113,7 +114,7 @@ select option {
 }
 
 .yellow {
-  color: yellow;
+  color: #d6d612;
 }
 /* ! end color changing for dificulty */
 
@@ -127,6 +128,7 @@ select option {
 /* ! info's list section */
 .info__list {
   text-align: center;
+  padding-bottom: 10px;
 }
 
 /* ! changing degree of svg image */
@@ -149,6 +151,25 @@ select option {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/*! customizing scrollbar of info__list */
+.info__list::-webkit-scrollbar {
+  width: 10px;
+}
+
+/*! customizing scrollbar of info__list */
+.info__list::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/*! customizing scrollbar of info__list */
+.info__list::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 10px;
 }
 
 .list__lists {
@@ -202,12 +223,15 @@ select option {
   display: flex;
   flex-direction: column;
   align-items: start;
+  justify-content: space-between;
   background-color: #fff;
   padding: 5px 10px;
   border-radius: 10px;
   border-top-right-radius: 0px;
   border-top-left-radius: 0px;
+  gap: 10px;
 }
+
 /* ! end info's list section */
 /* ! end info */
 
@@ -265,7 +289,7 @@ select option {
   font-size: 17px;
   font-weight: 500;
   color: white;
-  background-color: #1b7a1f;
+  background-color: #0c8913;
   padding: 7px 14px;
   cursor: no-drop;
   border: none;
@@ -281,4 +305,76 @@ select option {
   border: none;
   border-radius: 5px;
   background-color: #ae1c4f;
+}
+
+/* ! pop up ========================================= */
+
+.button {
+  padding: 7px 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #1976d2;
+  font-size: 17px;
+  font-weight: 500;
+  color: white;
+  transition: all 0.1s;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #1565c0;
+  box-shadow: 0.9px 0.9px 8px rgb(21, 81, 159);
+  transition: all 0.1s;
+}
+
+.button:active {
+  background-color: #5c94d3;
+  transition: all 3ms;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup #close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.pop-up__header {
+  text-align: center;
+}
+
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px) {
+  .popup {
+    width: 70%;
+  }
 }

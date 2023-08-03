@@ -1,6 +1,100 @@
 import data from "./tests.json" assert { type: "json" };
 
-let users = [];
+let users = [
+  {
+    username: "serdar",
+    easy: {
+      questionsNumbers: 10,
+      rightAnswers: 9,
+      points: 27,
+      dificulity: "easy",
+    },
+    medium: {
+      questionsNumbers: 10,
+      rightAnswers: 9,
+      points: 27,
+      dificulity: "easy",
+    },
+    hard: {
+      questionsNumbers: 10,
+      rightAnswers: 9,
+      points: 27,
+      dificulity: "easy",
+    },
+  },
+  {
+    username: "meylis",
+    medium: {
+      questionsNumbers: 10,
+      rightAnswers: 5,
+      points: 15,
+      dificulity: "medium",
+    },
+  },
+  {
+    username: "jennet",
+    hard: {
+      questionsNumbers: 10,
+      rightAnswers: 7,
+      points: 21,
+      dificulity: "hard",
+    },
+  },
+  {
+    username: "serdar",
+    easy: {
+      questionsNumbers: 10,
+      rightAnswers: 9,
+      points: 27,
+      dificulity: "easy",
+    },
+  },
+  {
+    username: "meylis",
+    medium: {
+      questionsNumbers: 10,
+      rightAnswers: 5,
+      points: 15,
+      dificulity: "medium",
+    },
+  },
+  {
+    username: "jennet",
+    hard: {
+      questionsNumbers: 10,
+      rightAnswers: 7,
+      points: 21,
+      dificulity: "hard",
+    },
+  },
+  {
+    username: "serdar",
+    easy: {
+      questionsNumbers: 10,
+      rightAnswers: 9,
+      points: 27,
+      dificulity: "easy",
+    },
+  },
+  {
+    username: "meylis",
+    medium: {
+      questionsNumbers: 10,
+      rightAnswers: 5,
+      points: 15,
+      dificulity: "medium",
+    },
+  },
+  {
+    username: "jennet",
+    hard: {
+      questionsNumbers: 10,
+      rightAnswers: 7,
+      points: 21,
+      dificulity: "hard",
+    },
+  },
+];
 // {
 //   username: '',
 //   easy : {
@@ -33,16 +127,10 @@ function signUpValidation() {
   let username = document.getElementById("name").value;
   let dificulity = document.getElementById("inputOfDificulity").value;
   if (users.length === 0) {
-    users.push({
-      username,
-    });
     currentUser = username;
     currentDificulity = dificulity;
     startingTest();
   } else if (users.every((item) => item.username !== username)) {
-    users.push({
-      username,
-    });
     currentUser = username;
     currentDificulity = dificulity;
     startingTest();
@@ -84,48 +172,98 @@ function fromSignIn() {
 }
 
 function startingTest() {
-  showingQuestions();
   informationOfUser();
+  creatingInfo();
+  showingQuestions();
 }
 // ! info dropdown
-let parent__list = document.getElementsByClassName("list__item").item(0);
-let active = false;
-parent__list.onclick = () => {
-  let level = [
-    {
-      dificulty: "easy",
-      points: 10,
-    },
-    {
-      dificulty: "hard",
-      points: 10,
-    },
-  ];
-  let status = document.querySelector("svg").classList;
-  let listItem = document.querySelector(".item__user").classList;
-  active = active ? false : true;
-  status.toggle("list__arrow-click");
-
-  listItem.toggle("item__user-active");
-  if (active) {
-    let container = document.createElement("div");
-    container.className = "item__results";
-    container.id = `container-id`;
-    level.forEach((item, index) => {
-      let points = document.createElement("p");
-      let paragraghs = document.createElement("p");
-      points.innerText = item.points;
-      paragraghs.innerText = item.dificulty;
-
-      container.append(paragraghs);
-      container.append(points);
-    });
-    parent__list.append(container);
+function creatingInfo() {
+  if (users.length === 0) {
+    let parent__list = document.getElementById("listOfUsersInfo"),
+      info = document.createElement("p");
+    info.innerText = "while no one is there";
+    parent__list.append(info);
   } else {
-    document.getElementById("container-id").remove();
+    let parent__list = document.getElementById("listOfUsersInfo");
+
+    users.forEach((item, index) => {
+      let listItem = document.createElement("li"),
+        itemUser = document.createElement("div"),
+        username = document.createElement("p"),
+        arrow = document.createElement("img"),
+        active = false;
+
+      listItem.className = "list__item";
+      listItem.id = `list__item-${index}`;
+      itemUser.className = "item__user";
+      itemUser.id = `item__user-${index}`;
+      username.innerText = item.username;
+      arrow.src = "./arrow.svg";
+      arrow.className = "list__arrow";
+      arrow.id = `item__arrow-${index}`;
+
+      itemUser.append(username);
+      itemUser.append(arrow);
+      listItem.append(itemUser);
+
+      // ! on click arrow
+      listItem.onclick = () => {
+        let status = document.querySelector(`#item__arrow-${index}`).classList;
+        let itemUser1 = document.querySelector(
+            `#item__user-${index}`
+          ).classList,
+          tempArray = [];
+        active = active ? false : true;
+        status.toggle("list__arrow-click");
+
+        itemUser1.toggle("item__user-active");
+        if (checkingUserProperty(item.easy)) tempArray.push(item.easy);
+        if (checkingUserProperty(item.medium)) tempArray.push(item.medium);
+        if (checkingUserProperty(item.hard)) tempArray.push(item.hard);
+
+        if (active) {
+          let container = document.createElement("div");
+          container.className = "item__results";
+          container.id = `container-id-${index}`;
+          tempArray.forEach((item1) => {
+            let points = document.createElement("p");
+            let dificulity = document.createElement("p");
+            let rightAnswers = document.createElement("p");
+            let spanOfPoints = document.createElement("span");
+            let spanOfDificulity = document.createElement("span");
+            let spanOfRightAnswers = document.createElement("span");
+            spanOfDificulity.innerText = item1.dificulity;
+            spanOfPoints.innerText = item1.points;
+            spanOfRightAnswers.innerText = item1.rightAnswers;
+            points.innerText = `Points : `;
+            dificulity.innerText = `Dificulity : `;
+            rightAnswers.innerText = `Right Answers : `;
+            dificulity.append(spanOfDificulity);
+            points.append(spanOfPoints);
+            rightAnswers.append(spanOfRightAnswers);
+            container.append(dificulity);
+            container.append(points);
+            container.append(rightAnswers);
+          });
+          listItem.append(container);
+        } else {
+          document.getElementById(`container-id-${index}`).remove();
+        }
+      };
+      parent__list.append(listItem);
+    });
   }
-};
+}
 // ! end info dropdown
+
+// ! checking is null
+function checkingUserProperty(property) {
+  if (property && typeof property !== "undefined") {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 // ! showes tests
 function showingQuestions() {
@@ -141,7 +279,7 @@ function showingQuestions() {
   test__section.append(test__question);
 
   let test__buttons = document.createElement("div");
-  let buttonsId = `container-of-buttons-${currentId}`;
+  let buttonsId = `container-${currentId}`;
   test__buttons.id = buttonsId;
   test__buttons.className = "test__buttons";
 
@@ -150,17 +288,18 @@ function showingQuestions() {
     test__button.className = "test__button";
     test__button.innerText = item1.answer;
     test__button.onclick = () => {
+      test__button.style.cssText = `
+      transform: scale(1.2);
+     `;
       // ! checking passed test if right ++
       if (item1.isRight) {
         passedTest++;
+        // ! checking how many points get if right += 3
+        currentPoints += 3;
         calculatingRightAnswers();
       }
-      if (item1.isRight) {
-        currentPoints += 3;
-        calculatingRightAnswersOfpoints();
-      }
       answerValidation(buttonsId, currentId);
-      window.location.href = `#container-of-buttons-${currentId}`;
+      window.location.href = `#container-${currentId}`;
     };
     test__buttons.append(test__button);
   });
@@ -185,12 +324,18 @@ function answerValidation(id) {
   }
   // ?  validating isLast question of test
   if (gettingCurrentTest().length - 1 === currentId) {
+    // users.push({
+    //   currentDificulity,
+    //   questionsNumbers: gettingCurrentTest().length,
+    //   rightAnswers: passedTest,
+    //   points: currentPoints,
+    // });
+    dataPusher();
+    popUp();
+
     currentUser = "";
     currentDificulity = "";
     currentId = 0;
-    console.log(currentUser);
-    console.log(currentDificulity);
-    console.log(currentId);
     console.log(users);
   } else {
     // ? increment current id
@@ -231,10 +376,6 @@ function informationOfUser() {
   preparedUsername += currentUser.slice(1);
   spanOfDificulity.innerText = preparedDificulity;
 
-  let answers = eval(
-    `data.tests.${currentDificulity}.questions[${currentId}].answers`
-  );
-
   colorChanger(spanOfDificulity);
   info__username.innerText = preparedUsername;
   info__dificulity.innerText = `Dificulity : `;
@@ -260,9 +401,63 @@ function colorChanger(span) {
 function calculatingRightAnswers() {
   let passed = document.getElementById("passed");
   passed.innerText = `Tests : ${passedTest} / ${gettingCurrentTest().length}`;
-}
-
-function calculatingRightAnswersOfpoints() {
   let points = document.getElementById("points");
   points.innerText = `Points : ${currentPoints}`;
+}
+
+function dataPusher() {
+  users.every((item) => item.username != currentUser);
+  let newUser = {
+    username: currentUser,
+  };
+  if (currentDificulity === "easy") {
+    newUser.easy = {
+      questionsAnswers: gettingCurrentTest().length,
+      rightAnswers: passedTest,
+      points: currentPoints,
+    };
+  } else if (currentDificulity === "medium") {
+    newUser.medium = {
+      questionsAnswers: gettingCurrentTest().length,
+      rightAnswers: passedTest,
+      points: currentPoints,
+    };
+  } else if (currentDificulity === "hard") {
+    newUser.hard = {
+      questionsAnswers: gettingCurrentTest().length,
+      rightAnswers: passedTest,
+      points: currentPoints,
+    };
+  }
+  users.push(newUser);
+}
+
+function popUp() {
+  let popup = document.getElementById("popup1");
+  popup.style.display = "block";
+
+  let popUp__results = document.getElementById("popUp__results");
+  let points = document.createElement("p");
+  let dificulity = document.createElement("p");
+  let username = document.createElement("p");
+  let rightAnswers = document.createElement("p");
+
+  points.innerText = `Points : ${currentPoints}`;
+  dificulity.innerText = `Dificulity : ${currentDificulity}`;
+  rightAnswers.innerText = `Right Answers : ${passedTest}`;
+  username.innerText = `User name : ${currentUser}`;
+  popUp__results.append(username);
+  popUp__results.append(dificulity);
+  popUp__results.append(points);
+  popUp__results.append(rightAnswers);
+  console.log(popUp__results);
+  let closerPopUP = document.getElementById("close");
+  closerPopUP.onclick = () => (popup.style.display = "none");
+  let parentOfButtons = document.getElementById("popUp__buttons");
+  let parentOfButtons__tryAgain = parentOfButtons
+    .getElementsByTagName("button")
+    .item(0);
+  let parentOfButtons__goToForm = parentOfButtons
+    .getElementsByTagName("button")
+    .item(1);
 }

@@ -36,7 +36,6 @@
         </div>
       </div>
     </div>
-
     <section id="wrapper">
       <div class="info">
         <div class="info__content">
@@ -48,27 +47,29 @@
           </div>
           <div class="info__list">
             <h2 class="info__title">User's list</h2>
-            <ol class="list__lists">
-              <li class="list__item">
-                <div class="item__user">
-                  <p>user</p>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
-                    class="list__arrow"
-                  >
-                    <path
-                      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-                    />
-                  </svg>
-                </div>
-              </li>
-            </ol>
+            <ol class="list__lists" id="listOfUsersInfo"></ol>
           </div>
         </div>
       </div>
       <div class="test">
         <div class="test__content"></div>
+        <div class="pop-up">
+          <div id="popup1" class="overlay">
+            <div class="popup">
+              <h2 class="pop-up__header">
+                &LeftAngleBracket;&LeftAngleBracket;Congratulations&RightAngleBracket;&RightAngleBracket;
+              </h2>
+              <a id="close" href="#">&times;</a>
+              <div class="content">
+                <div class="pop-up__results" id="popUp__results"></div>
+                <div class="pop-up__buttons" id="popUp__buttons">
+                  <button class="pop-up__button button">Try again</button>
+                  <button class="pop-up__button button">Go to the form</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <script src="./app.js" type="module"></script>
