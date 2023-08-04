@@ -1,118 +1,18 @@
 import data from "./tests.json" assert { type: "json" };
 
-let users = [
-  {
-    username: "serdar",
-    easy: {
-      questionsNumbers: 10,
-      rightAnswers: 9,
-      points: 27,
-      dificulity: "easy",
-    },
-    medium: {
-      questionsNumbers: 10,
-      rightAnswers: 9,
-      points: 27,
-      dificulity: "easy",
-    },
-    hard: {
-      questionsNumbers: 10,
-      rightAnswers: 9,
-      points: 27,
-      dificulity: "easy",
-    },
-  },
-  {
-    username: "meylis",
-    medium: {
-      questionsNumbers: 10,
-      rightAnswers: 5,
-      points: 15,
-      dificulity: "medium",
-    },
-  },
-  {
-    username: "jennet",
-    hard: {
-      questionsNumbers: 10,
-      rightAnswers: 7,
-      points: 21,
-      dificulity: "hard",
-    },
-  },
-  {
-    username: "serdar",
-    easy: {
-      questionsNumbers: 10,
-      rightAnswers: 9,
-      points: 27,
-      dificulity: "easy",
-    },
-  },
-  {
-    username: "meylis",
-    medium: {
-      questionsNumbers: 10,
-      rightAnswers: 5,
-      points: 15,
-      dificulity: "medium",
-    },
-  },
-  {
-    username: "jennet",
-    hard: {
-      questionsNumbers: 10,
-      rightAnswers: 7,
-      points: 21,
-      dificulity: "hard",
-    },
-  },
-  {
-    username: "serdar",
-    easy: {
-      questionsNumbers: 10,
-      rightAnswers: 9,
-      points: 27,
-      dificulity: "easy",
-    },
-  },
-  {
-    username: "meylis",
-    medium: {
-      questionsNumbers: 10,
-      rightAnswers: 5,
-      points: 15,
-      dificulity: "medium",
-    },
-  },
-  {
-    username: "jennet",
-    hard: {
-      questionsNumbers: 10,
-      rightAnswers: 7,
-      points: 21,
-      dificulity: "hard",
-    },
-  },
-];
-// {
-//   username: '',
-//   easy : {
-//     questionsNumbers : 10,
-//     rightAnswers : 7
-//   }
-// }
+let users = [];
 
 let currentUser = "";
 let currentDificulity = "";
 let currentId = 0;
 let currentPoints = 0;
 let passedTest = 0;
+
 // ! inputs validation
 function validation() {
   let username = document.getElementById("name").value;
   if (
-    username.length <= 35 &&
+    username.length <= 15 &&
     username.length != 0 &&
     isNaN(Number(username))
   ) {
@@ -138,14 +38,16 @@ function signUpValidation() {
     alert("This name is taken");
   }
 }
+
 document.getElementById("signUp").onclick = fromSignUp;
 function fromSignUp() {
   if (validation()) {
     signUpValidation();
   } else {
-    alert("write symbols more than 0 and less than 35");
+    alert("write symbols more than 0 and less than 15");
   }
 }
+
 // ! form Sign in
 function signInValidation() {
   let username = document.getElementById("name").value;
@@ -162,12 +64,13 @@ function signInValidation() {
     alert("Not found");
   }
 }
+
 document.getElementById("signIn").onclick = fromSignIn;
 function fromSignIn() {
   if (validation()) {
     signInValidation();
   } else {
-    alert("write symbols more than 0 and less than 35");
+    alert("write symbols more than 0 and less than 15");
   }
 }
 
@@ -175,7 +78,9 @@ function startingTest() {
   informationOfUser();
   creatingInfo();
   showingQuestions();
+  document.getElementById("name").value = "";
 }
+
 // ! info dropdown
 function creatingInfo() {
   if (users.length === 0) {
@@ -207,7 +112,7 @@ function creatingInfo() {
       listItem.append(itemUser);
 
       // ! on click arrow
-      listItem.onclick = () => {
+      itemUser.onclick = () => {
         let status = document.querySelector(`#item__arrow-${index}`).classList;
         let itemUser1 = document.querySelector(
             `#item__user-${index}`
@@ -225,13 +130,16 @@ function creatingInfo() {
           let container = document.createElement("div");
           container.className = "item__results";
           container.id = `container-id-${index}`;
-          tempArray.forEach((item1) => {
+          tempArray.forEach((item1, index1) => {
+            let wrapperOfInfo = document.createElement("div");
             let points = document.createElement("p");
             let dificulity = document.createElement("p");
             let rightAnswers = document.createElement("p");
             let spanOfPoints = document.createElement("span");
             let spanOfDificulity = document.createElement("span");
             let spanOfRightAnswers = document.createElement("span");
+            let divider = document.createElement("div");
+            divider.className = "item__divider";
             spanOfDificulity.innerText = item1.dificulity;
             spanOfPoints.innerText = item1.points;
             spanOfRightAnswers.innerText = item1.rightAnswers;
@@ -241,9 +149,11 @@ function creatingInfo() {
             dificulity.append(spanOfDificulity);
             points.append(spanOfPoints);
             rightAnswers.append(spanOfRightAnswers);
-            container.append(dificulity);
-            container.append(points);
-            container.append(rightAnswers);
+            wrapperOfInfo.append(dificulity);
+            wrapperOfInfo.append(points);
+            wrapperOfInfo.append(rightAnswers);
+            container.append(wrapperOfInfo);
+            if (index1 !== tempArray.length - 1) container.append(divider);
           });
           listItem.append(container);
         } else {
@@ -254,7 +164,6 @@ function creatingInfo() {
     });
   }
 }
-// ! end info dropdown
 
 // ! checking is null
 function checkingUserProperty(property) {
@@ -288,9 +197,10 @@ function showingQuestions() {
     test__button.className = "test__button";
     test__button.innerText = item1.answer;
     test__button.onclick = () => {
-      test__button.style.cssText = `
-      transform: scale(1.2);
-     `;
+      let img = document.createElement("img");
+      img.src = "./circle-check-regular.svg";
+      img.style.marginLeft = "10px";
+      test__button.append(img);
       // ! checking passed test if right ++
       if (item1.isRight) {
         passedTest++;
@@ -324,19 +234,8 @@ function answerValidation(id) {
   }
   // ?  validating isLast question of test
   if (gettingCurrentTest().length - 1 === currentId) {
-    // users.push({
-    //   currentDificulity,
-    //   questionsNumbers: gettingCurrentTest().length,
-    //   rightAnswers: passedTest,
-    //   points: currentPoints,
-    // });
     dataPusher();
     popUp();
-
-    currentUser = "";
-    currentDificulity = "";
-    currentId = 0;
-    console.log(users);
   } else {
     // ? increment current id
     currentId++;
@@ -355,8 +254,7 @@ function gettingCurrentTest() {
   }
 }
 
-// ! end shower tests and here ends function which is has name : answerValidation()
-
+// ! tops up info section
 function informationOfUser() {
   let sectionOfTests = document.getElementById("wrapper");
   let form = document.getElementById("form");
@@ -384,9 +282,9 @@ function informationOfUser() {
     gettingCurrentTest().length
   }`;
   points.innerText = `Points : ${currentPoints}`;
-  console.log(`username : ${currentUser}; dificulty : ${currentDificulity}`);
 }
 
+// ! to manage color of dificulity
 function colorChanger(span) {
   if (currentDificulity == "easy") {
     span.className = "green";
@@ -405,36 +303,69 @@ function calculatingRightAnswers() {
   points.innerText = `Points : ${currentPoints}`;
 }
 
+// ! pushes data to users
 function dataPusher() {
-  users.every((item) => item.username != currentUser);
-  let newUser = {
-    username: currentUser,
-  };
-  if (currentDificulity === "easy") {
-    newUser.easy = {
-      questionsAnswers: gettingCurrentTest().length,
-      rightAnswers: passedTest,
-      points: currentPoints,
+  let array = users.filter((item) => item.username === currentUser);
+  if (array.length === 1) {
+    let itemIndex = users.indexOf(array[0]);
+
+    if (currentDificulity === "easy") {
+      users[itemIndex].easy = {
+        questionsAnswers: gettingCurrentTest().length,
+        rightAnswers: passedTest,
+        points: currentPoints,
+        dificulity: currentDificulity,
+      };
+    } else if (currentDificulity === "medium") {
+      users[itemIndex].medium = {
+        questionsAnswers: gettingCurrentTest().length,
+        rightAnswers: passedTest,
+        points: currentPoints,
+        dificulity: currentDificulity,
+      };
+    } else if (currentDificulity === "hard") {
+      users[itemIndex].hard = {
+        questionsAnswers: gettingCurrentTest().length,
+        rightAnswers: passedTest,
+        points: currentPoints,
+        dificulity: currentDificulity,
+      };
+    }
+  } else {
+    let newUser = {
+      username: currentUser,
     };
-  } else if (currentDificulity === "medium") {
-    newUser.medium = {
-      questionsAnswers: gettingCurrentTest().length,
-      rightAnswers: passedTest,
-      points: currentPoints,
-    };
-  } else if (currentDificulity === "hard") {
-    newUser.hard = {
-      questionsAnswers: gettingCurrentTest().length,
-      rightAnswers: passedTest,
-      points: currentPoints,
-    };
+
+    if (currentDificulity === "easy") {
+      newUser.easy = {
+        questionsAnswers: gettingCurrentTest().length,
+        rightAnswers: passedTest,
+        points: currentPoints,
+        dificulity: currentDificulity,
+      };
+    } else if (currentDificulity === "medium") {
+      newUser.medium = {
+        questionsAnswers: gettingCurrentTest().length,
+        rightAnswers: passedTest,
+        points: currentPoints,
+        dificulity: currentDificulity,
+      };
+    } else if (currentDificulity === "hard") {
+      newUser.hard = {
+        questionsAnswers: gettingCurrentTest().length,
+        rightAnswers: passedTest,
+        points: currentPoints,
+        dificulity: currentDificulity,
+      };
+    }
+    users.push(newUser);
   }
-  users.push(newUser);
 }
 
+// ! popUp
 function popUp() {
   let popup = document.getElementById("popup1");
-  popup.style.display = "block";
+  popup.style.display = "flex";
 
   let popUp__results = document.getElementById("popUp__results");
   let points = document.createElement("p");
@@ -450,9 +381,6 @@ function popUp() {
   popUp__results.append(dificulity);
   popUp__results.append(points);
   popUp__results.append(rightAnswers);
-  console.log(popUp__results);
-  let closerPopUP = document.getElementById("close");
-  closerPopUP.onclick = () => (popup.style.display = "none");
   let parentOfButtons = document.getElementById("popUp__buttons");
   let parentOfButtons__tryAgain = parentOfButtons
     .getElementsByTagName("button")
@@ -460,4 +388,46 @@ function popUp() {
   let parentOfButtons__goToForm = parentOfButtons
     .getElementsByTagName("button")
     .item(1);
+  parentOfButtons__goToForm.onclick = () => {
+    document.getElementById("wrapper").style.display = "none";
+    popup.style.display = "none";
+    document.getElementById("form").style.display = "flex";
+    // !
+    nullingAllGlobalVars();
+    removingInfoAndQuestions();
+  };
+}
+
+// ! for popUp this function makes passed tests disappear
+function removingInfoAndQuestions() {
+  let test = document.getElementsByClassName("test").item(0);
+  let test__content = document.createElement("div");
+  let listOfUsersInfo = document.createElement("ol"),
+    listOfUsersInfoParent = document.querySelector(".info__list");
+  test.getElementsByClassName("test__content").item(0).remove();
+  test__content.className = "test__content";
+  test.append(test__content);
+
+  document.getElementById("listOfUsersInfo").remove();
+  listOfUsersInfo.id = "listOfUsersInfo";
+  listOfUsersInfo.className = "list__lists";
+  listOfUsersInfoParent.append(listOfUsersInfo);
+}
+
+// ! for popUp resets all the global variables
+function nullingAllGlobalVars() {
+  currentDificulity = "";
+  currentId = 0;
+  currentUser = "";
+  currentPoints = 0;
+  passedTest = 0;
+}
+
+function removingPopUpDetails() {
+  let popUp__results;
+  popUp__results.remove();
+  let popUp__results1 = document.createElement("div");
+  popUp__results1.id = "popUp__results";
+  popUp__results1.className = "popUp__results";
+  document.getElementsByClassName("content").item(0).append(popUp__results1);
 }

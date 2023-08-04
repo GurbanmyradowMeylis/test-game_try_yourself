@@ -220,10 +220,10 @@ select option {
 /* ! end list's dropdown  */
 
 .item__results {
+  text-align: left;
   display: flex;
   flex-direction: column;
   align-items: start;
-  justify-content: space-between;
   background-color: #fff;
   padding: 5px 10px;
   border-radius: 10px;
@@ -232,6 +232,11 @@ select option {
   gap: 10px;
 }
 
+.item__divider {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
 /* ! end info's list section */
 /* ! end info */
 
@@ -286,17 +291,25 @@ select option {
 }
 
 .green-answer {
+  display: flex;
+  align-items: center;
   font-size: 17px;
   font-weight: 500;
   color: white;
-  background-color: #0c8913;
   padding: 7px 14px;
+  background-color: #0c8913;
   cursor: no-drop;
   border: none;
   border-radius: 5px;
 }
 
+.green-answer::after {
+  background: url("./circle-check-regular.svg");
+}
+
 .red-answer {
+  display: flex;
+  align-items: center;
   font-size: 17px;
   font-weight: 500;
   color: white;
@@ -305,6 +318,10 @@ select option {
   border: none;
   border-radius: 5px;
   background-color: #ae1c4f;
+}
+
+.red-answer::after {
+  background-image: url("./circle-check-regular.svg");
 }
 
 /* ! pop up ========================================= */
@@ -341,10 +358,11 @@ select option {
   right: 0;
   background: rgba(0, 0, 0, 0.7);
   display: none;
+  justify-content: center;
+  align-items: center;
 }
 
 .popup {
-  margin: 70px auto;
   padding: 20px;
   background: #fff;
   border-radius: 5px;
@@ -353,24 +371,35 @@ select option {
   transition: all 5s ease-in-out;
 }
 
-.popup #close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  transition: all 200ms;
-  font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #333;
-}
-
 .pop-up__header {
   text-align: center;
+  order: 0;
 }
 
 .popup .content {
   max-height: 30%;
-  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.popup .pop-up__results {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.popup .pop-up__buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.pop-up__button {
+  order: 2;
+}
+
+.pop-up__button1 {
+  order: 3;
 }
 
 @media screen and (max-width: 700px) {
