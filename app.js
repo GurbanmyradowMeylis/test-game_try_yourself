@@ -1,12 +1,11 @@
 import data from "./tests.json" assert { type: "json" };
 
-let users = [];
-
-let currentUser = "";
-let currentDificulity = "";
-let currentId = 0;
-let currentPoints = 0;
-let passedTest = 0;
+let users = [],
+  currentUser = "",
+  currentDificulity = "",
+  currentId = 0,
+  currentPoints = 0,
+  passedTest = 0;
 
 // ! inputs validation
 function validation() {
@@ -393,8 +392,26 @@ function popUp() {
     popup.style.display = "none";
     document.getElementById("form").style.display = "flex";
     // !
-    nullingAllGlobalVars();
+    nullingAllGlobalVars(false);
+    removingPopUpDetails();
     removingInfoAndQuestions();
+  };
+  // ! try again clicked pop up
+  parentOfButtons__tryAgain.onclick = () => {
+    let tryAgainPopUp = document.getElementById("tryAgainPopUp");
+    popup.style.display = "none";
+    tryAgainPopUp.style.display = "flex";
+  };
+  let startTryAgain = document.getElementById("PopUPStart");
+  // ! start clicked in try again pop up
+  startTryAgain.onclick = () => {
+    let inputDifficulty = document.getElementById("tryAgainDificulity").value;
+    tryAgainPopUp.style.display = "none";
+    nullingAllGlobalVars(true);
+    currentDificulity = inputDifficulty;
+    removingPopUpDetails();
+    removingInfoAndQuestions();
+    startingTest();
   };
 }
 
@@ -415,16 +432,22 @@ function removingInfoAndQuestions() {
 }
 
 // ! for popUp resets all the global variables
-function nullingAllGlobalVars() {
-  currentDificulity = "";
-  currentId = 0;
-  currentUser = "";
-  currentPoints = 0;
-  passedTest = 0;
+function nullingAllGlobalVars(isTryAgain) {
+  if (isTryAgain) {
+    currentId = 0;
+    currentPoints = 0;
+    passedTest = 0;
+  } else {
+    currentDificulity = "";
+    currentId = 0;
+    currentUser = "";
+    currentPoints = 0;
+    passedTest = 0;
+  }
 }
 
 function removingPopUpDetails() {
-  let popUp__results;
+  let popUp__results = document.getElementById("popUp__results");
   popUp__results.remove();
   let popUp__results1 = document.createElement("div");
   popUp__results1.id = "popUp__results";

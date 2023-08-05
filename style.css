@@ -303,10 +303,6 @@ select option {
   border-radius: 5px;
 }
 
-.green-answer::after {
-  background: url("./circle-check-regular.svg");
-}
-
 .red-answer {
   display: flex;
   align-items: center;
@@ -318,10 +314,6 @@ select option {
   border: none;
   border-radius: 5px;
   background-color: #ae1c4f;
-}
-
-.red-answer::after {
-  background-image: url("./circle-check-regular.svg");
 }
 
 /* ! pop up ========================================= */
@@ -373,6 +365,7 @@ select option {
 
 .pop-up__header {
   text-align: center;
+  font-size: 25px;
   order: 0;
 }
 
@@ -387,19 +380,59 @@ select option {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  order: 2;
 }
 
 .popup .pop-up__buttons {
   display: flex;
   gap: 15px;
+  order: 3;
 }
 
 .pop-up__button {
-  order: 2;
+  order: 0;
 }
 
 .pop-up__button1 {
-  order: 3;
+  order: 1;
+}
+
+.try-again__overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.try-again__popup {
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.try-again__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+#tryAgainDificulity {
+  align-self: center;
+  width: 60%;
+}
+
+.try-again__content button {
+  align-self: center;
+  width: 80%;
 }
 
 @media screen and (max-width: 700px) {
