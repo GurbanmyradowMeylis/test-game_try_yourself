@@ -690,14 +690,11 @@ select option {
 
   .left {
     position: absolute;
-    width: 120px;
+    width: 50vw;
     padding: 0;
     z-index: 2;
     transition: all 1s;
     left: 0px;
-  }
-  .rotated {
-    transform: rotate(180deg);
   }
 
   .info__arrow {
@@ -708,14 +705,7 @@ select option {
     border-top-right-radius: 90px;
     border-bottom-right-radius: 90px;
     padding: 10px 3px 5px 2px;
-    transition: transform 1s;
   }
-
-  .info__arrow img {
-    width: 20px;
-    height: 20px;
-  }
-
   .info__content {
     border-radius: 0px;
     box-shadow: 0px 0px 0px;
@@ -791,4 +781,18 @@ select option {
   .info__content {
     gap: 10px;
   }
+}
+
+.info__arrow-rotate {
+  transform: rotate(180deg);
+  transition: transform 1s;
+  width: 20px;
+  height: 20px;
+}
+
+.info__arrow-default {
+  width: 20px;
+  height: 20px;
+  transform: rotate(0deg);
+  transition: transform 1s;
 }

@@ -484,10 +484,13 @@ function removingPopUpDetails() {
 function infoSideBarOpener() {
   let infoSideBar = document.getElementById("infoSideBar");
   let infoArrow = document.getElementById("infoArrow");
-  infoArrow.onclick = () => {
-    infoSideBar.classList.toggle("left");
-    infoArrow.getElementsByTagName("img").item(0).classList.toggle("rotated");
-  };
+  infoSideBar.classList.toggle("left");
+  let infoArrowChild = infoArrow.getElementsByTagName("img").item(0);
+  if (infoArrowChild.className != "info__arrow-rotate") {
+    infoArrowChild.className = "info__arrow-rotate";
+  } else {
+    infoArrowChild.className = "info__arrow-default";
+  }
 }
 
-infoSideBarOpener();
+document.getElementById("infoArrow").onclick = infoSideBarOpener;
