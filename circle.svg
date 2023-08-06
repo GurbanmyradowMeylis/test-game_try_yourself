@@ -1,0 +1,7 @@
+<svg id="Group_18" data-name="Group 18" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+  <g id="Ellipse_10" data-name="Ellipse 10" fill="#ffeb95" stroke="#ebac81" stroke-width="1">
+    <circle cx="7.5" cy="7.5" r="7.5" stroke="none"/>
+    <circle cx="7.5" cy="7.5" r="7" fill="none"/>
+  </g>
+  <path id="Polygon_3" data-name="Polygon 3" d="M5.747.732a.4.4,0,0,1,.718,0L7.842,3.538a.4.4,0,0,0,.311.221l3.183.383a.4.4,0,0,1,.219.695L9.24,6.916a.4.4,0,0,0-.125.376l.6,3a.4.4,0,0,1-.579.432l-2.844-1.5a.4.4,0,0,0-.373,0l-2.844,1.5A.4.4,0,0,1,2.5,10.3l.6-3a.4.4,0,0,0-.125-.376L.656,4.837a.4.4,0,0,1,.219-.695l3.183-.383a.4.4,0,0,0,.311-.221Z" transform="translate(1.583 1.751)" fill="#ebac81"/>
+</svg>

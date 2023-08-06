@@ -86,6 +86,7 @@ function creatingInfo() {
     let parent__list = document.getElementById("listOfUsersInfo"),
       info = document.createElement("p");
     info.innerText = "while no one is there";
+    info.className = "list__item__nobody";
     parent__list.append(info);
   } else {
     let parent__list = document.getElementById("listOfUsersInfo");
@@ -138,6 +139,13 @@ function creatingInfo() {
             let spanOfDificulity = document.createElement("span");
             let spanOfRightAnswers = document.createElement("span");
             let divider = document.createElement("div");
+
+            points.className = "list__points";
+
+            dificulity.className = "list__dificulity";
+
+            rightAnswers.className = "list__passed";
+
             divider.className = "item__divider";
             spanOfDificulity.innerText = item1.dificulity;
             spanOfPoints.innerText = item1.points;
@@ -198,7 +206,7 @@ function showingQuestions() {
     test__button.onclick = () => {
       let img = document.createElement("img");
       img.src = "./circle-check-regular.svg";
-      img.style.marginLeft = "10px";
+      img.className = "test__img";
       test__button.append(img);
       // ! checking passed test if right ++
       if (item1.isRight) {
@@ -265,22 +273,37 @@ function informationOfUser() {
   let points = document.getElementById("points");
   let info__dificulity = document.getElementById("dificulity");
   let info__counterOfPassedTest = document.getElementById("passed");
-  let preparedUsername = currentUser.slice(0, 1).toUpperCase();
   let preparedDificulity = currentDificulity.slice(0, 1).toUpperCase();
   let spanOfDificulity = document.createElement("span");
 
   preparedDificulity += currentDificulity.slice(1);
-  preparedUsername += currentUser.slice(1);
   spanOfDificulity.innerText = preparedDificulity;
 
   colorChanger(spanOfDificulity);
-  info__username.innerText = preparedUsername;
+  info__username.innerText = currentUser;
   info__dificulity.innerText = `Dificulity : `;
   info__dificulity.append(spanOfDificulity);
   info__counterOfPassedTest.innerText = `Tests : ${passedTest} / ${
     gettingCurrentTest().length
   }`;
   points.innerText = `Points : ${currentPoints}`;
+  // ! for phones
+  let overlay = document.getElementById("popUpOfUsers");
+  let closer = document.getElementById("closer");
+  try {
+    let opener = document.getElementById("opener");
+    opener.onclick = () => {
+      overlay.style.display = "flex";
+    };
+  } catch (error) {
+    console.log(error);
+  }
+  closer.onclick = () => {
+    overlay.style.display = "none";
+  };
+  overlay.onclick = () => {
+    overlay.style.display = "none";
+  };
 }
 
 // ! to manage color of dificulity
@@ -367,19 +390,22 @@ function popUp() {
   popup.style.display = "flex";
 
   let popUp__results = document.getElementById("popUp__results");
+  let content = document.createElement("div");
   let points = document.createElement("p");
   let dificulity = document.createElement("p");
   let username = document.createElement("p");
   let rightAnswers = document.createElement("p");
 
+  content.className = "try-again__pop-up___content";
   points.innerText = `Points : ${currentPoints}`;
   dificulity.innerText = `Dificulity : ${currentDificulity}`;
   rightAnswers.innerText = `Right Answers : ${passedTest}`;
-  username.innerText = `User name : ${currentUser}`;
-  popUp__results.append(username);
-  popUp__results.append(dificulity);
-  popUp__results.append(points);
-  popUp__results.append(rightAnswers);
+  username.innerText = `Username : ${currentUser}`;
+  content.append(username);
+  content.append(dificulity);
+  content.append(points);
+  content.append(rightAnswers);
+  popUp__results.append(content);
   let parentOfButtons = document.getElementById("popUp__buttons");
   let parentOfButtons__tryAgain = parentOfButtons
     .getElementsByTagName("button")
@@ -454,3 +480,14 @@ function removingPopUpDetails() {
   popUp__results1.className = "popUp__results";
   document.getElementsByClassName("content").item(0).append(popUp__results1);
 }
+
+function infoSideBarOpener() {
+  let infoSideBar = document.getElementById("infoSideBar");
+  let infoArrow = document.getElementById("infoArrow");
+  infoArrow.onclick = () => {
+    infoSideBar.classList.toggle("left");
+    infoArrow.getElementsByTagName("img").item(0).classList.toggle("rotated");
+  };
+}
+
+infoSideBarOpener();
