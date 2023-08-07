@@ -113,6 +113,7 @@ function creatingInfo() {
 
       // ! on click arrow
       itemUser.onclick = () => {
+        popUpOfUserOpener();
         let status = document.querySelector(`#item__arrow-${index}`).classList;
         let itemUser1 = document.querySelector(
             `#item__user-${index}`
@@ -290,14 +291,7 @@ function informationOfUser() {
   // ! for phones
   let overlay = document.getElementById("popUpOfUsers");
   let closer = document.getElementById("closer");
-  try {
-    let opener = document.getElementById("opener");
-    opener.onclick = () => {
-      overlay.style.display = "flex";
-    };
-  } catch (error) {
-    console.log(error);
-  }
+
   closer.onclick = () => {
     overlay.style.display = "none";
   };
@@ -479,6 +473,12 @@ function removingPopUpDetails() {
   popUp__results1.id = "popUp__results";
   popUp__results1.className = "popUp__results";
   document.getElementsByClassName("content").item(0).append(popUp__results1);
+}
+
+function popUpOfUserOpener() {
+  infoSideBarOpener();
+  let popUpOfUsers = document.getElementById("popUpOfUsers");
+  popUpOfUsers.style.display = "flex";
 }
 
 function infoSideBarOpener() {

@@ -265,6 +265,7 @@ select option {
 .test__buttons {
   display: flex;
   gap: 30px;
+  justify-content: space-between;
 }
 
 .test__button {
@@ -351,6 +352,7 @@ select option {
 
 .overlay {
   position: fixed;
+  z-index: 3;
   top: 0;
   bottom: 0;
   left: 0;
@@ -410,6 +412,7 @@ select option {
 
 .try-again__overlay {
   position: fixed;
+  z-index: 3;
   top: 0;
   bottom: 0;
   left: 0;
@@ -446,6 +449,7 @@ select option {
 }
 
 .item__user___overlay {
+  z-index: 3;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -481,10 +485,14 @@ select option {
 }
 
 .pop-up__dificulity {
-  /* ! easy color: #149e0a; */
-  /* ! medium color : #FFCF00; */
-  /* ! hard color : #EC0000; */
+  /* ! easy color: #149e0a;  ===============================================================================================================================================================================================================
+  /* ! medium color : #FFCF00;  ===============================================================================================================================================================================================================
+  /* ! hard color : #EC0000;  =============================================================================================================================================================================================================== */
   font-size: 14px;
+}
+
+.info__arrow {
+  display: none;
 }
 
 /* * Large desktop */
@@ -508,10 +516,10 @@ select option {
   .item__user-active p,
   .list__item__nobody,
   .info__list a {
-    font-size: 17px;
+    font-size: 19px;
   }
   .info__username {
-    font-size: 22px;
+    font-size: 24px;
   }
   .button,
   .test__button,
@@ -520,7 +528,10 @@ select option {
   .pop-up__button,
   .pop-up__button1 {
     padding: 3.7px 7px;
-    font-size: 15px;
+    font-size: 19px;
+  }
+  .item__user {
+    padding: 3.7px 7px;
   }
   .try-again__content {
     gap: 20px;
@@ -534,15 +545,18 @@ select option {
     gap: 5px;
   }
   .info {
-    width: 30vw;
+    width: 25vw;
     padding: 10px;
   }
   .test {
-    width: 70vw;
+    width: 75vw;
     padding: 10px;
   }
   .info__content {
     gap: 20px;
+  }
+  .info__arrow {
+    display: none;
   }
 }
 
@@ -564,17 +578,17 @@ select option {
   .pop-up__header,
   .list__item__nobody,
   .info__list a {
-    font-size: 10px;
+    font-size: 19px;
   }
   .popup .content h1,
   .info__username {
-    font-size: 14px;
+    font-size: 24px;
   }
 
   .list__arrow,
   .list__arrow-click {
-    width: 7px;
-    height: 7px;
+    width: 12px;
+    height: 12px;
   }
 
   .list__lists,
@@ -617,7 +631,7 @@ select option {
   }
 
   .test__buttons {
-    gap: 10px;
+    gap: 20px;
   }
 
   .test__section {
@@ -645,6 +659,9 @@ select option {
   .info__content {
     gap: 10px;
   }
+  .info__arrow {
+    display: none;
+  }
 }
 
 /* ? Media Queries Landscape phones and down */
@@ -654,7 +671,6 @@ select option {
   .info__passed,
   .info__title,
   .info__dificulity,
-  #tryAgainDificulity,
   .item__user-active p,
   .item__user p,
   .list__points,
@@ -665,38 +681,75 @@ select option {
   .pop-up__header,
   .list__item__nobody,
   .info__list a {
-    font-size: 10px;
+    font-size: 30px;
   }
   .popup .content h1,
   .info__username {
-    font-size: 14px;
+    font-size: 34px;
+  }
+  #tryAgainDificulity {
+    font-size: 20px;
+  }
+
+  .item__user___pop-up {
+    padding: 30px;
+    border: 1px solid black;
+    border-radius: 30px;
+  }
+
+  .pop-up__list___item {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: #eeeeee;
+  }
+  .pop-up__dificulity {
+    color: #ec0000; /*todo ============================================================================================================== */
+    margin-top: 5px;
+    text-align: center;
+  }
+
+  .pop-up__img-tick {
   }
 
   #wrapper {
     position: relative;
     display: none;
     min-height: 100vh;
-    justify-content: start;
+    justify-content: center;
   }
 
   .info {
-    position: absolute;
-    width: 120px;
+    position: fixed;
+    width: 320px;
     padding: 0;
     z-index: 2;
-    left: -120px;
+    left: -320px;
     transition: all 1s;
   }
 
   .left {
-    position: absolute;
-    width: 50vw;
+    position: fixed;
+    width: 90vw;
     padding: 0;
     z-index: 2;
     transition: all 1s;
     left: 0px;
   }
 
+  .info__arrow-rotate {
+    transform: rotate(180deg);
+    transition: transform 1s;
+    width: 20px;
+    height: 20px;
+  }
+  .info__arrow-default {
+    width: 20px;
+    height: 20px;
+    transform: rotate(0deg);
+    transition: transform 1s;
+  }
   .info__arrow {
     position: absolute;
     background-color: rgb(201, 201, 201);
@@ -705,7 +758,14 @@ select option {
     border-top-right-radius: 90px;
     border-bottom-right-radius: 90px;
     padding: 10px 3px 5px 2px;
+    display: block;
   }
+
+  .disabled,
+  .left {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
   .info__content {
     border-radius: 0px;
     box-shadow: 0px 0px 0px;
@@ -716,9 +776,7 @@ select option {
   }
 
   .list__arrow {
-    transform: rotate(90deg);
-    width: 7px;
-    height: 7px;
+    display: none;
   }
 
   .list__lists,
@@ -735,14 +793,16 @@ select option {
     gap: 3px;
   }
 
+  #signIn,
+  #signUp,
   .button,
   .test__button,
   .red-answer,
   .green-answer,
   .pop-up__button,
   .pop-up__button1 {
-    padding: 3.7px 7px;
-    font-size: 10px;
+    padding: 7px 7px;
+    font-size: 20px;
   }
 
   .item__user,
@@ -751,8 +811,8 @@ select option {
   }
 
   .test__img {
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
   }
 
   .red-answer,
@@ -781,18 +841,4 @@ select option {
   .info__content {
     gap: 10px;
   }
-}
-
-.info__arrow-rotate {
-  transform: rotate(180deg);
-  transition: transform 1s;
-  width: 20px;
-  height: 20px;
-}
-
-.info__arrow-default {
-  width: 20px;
-  height: 20px;
-  transform: rotate(0deg);
-  transition: transform 1s;
 }
