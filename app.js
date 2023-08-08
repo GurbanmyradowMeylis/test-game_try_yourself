@@ -87,7 +87,7 @@ function creatingInfo() {
     let parent__list = document.getElementById("listOfUsersInfo"),
       info = document.createElement("p");
     info.innerText = "while no one is there";
-    info.className = "list__item__nobody";
+    info.className = "list__item__nobody less-weight";
     parent__list.append(info);
   } else {
     let parent__list = document.getElementById("listOfUsersInfo");
@@ -145,9 +145,10 @@ function creatingInfo() {
             points.className = "list__points";
 
             dificulity.className = "list__dificulity";
-
+            spanOfDificulity.className = "less-weight";
+            spanOfPoints.className = "less-weight";
             rightAnswers.className = "list__passed";
-
+            spanOfRightAnswers.className = "less-weight";
             divider.className = "item__divider";
             spanOfDificulity.innerText = item1.dificulity;
             spanOfPoints.innerText = item1.points;
@@ -166,7 +167,9 @@ function creatingInfo() {
           });
           listItem.append(container);
         } else {
-          document.getElementById(`container-id-${index}`).remove();
+          try {
+            document.getElementById(`container-id-${index}`).remove();
+          } catch (error) {}
         }
       };
       parent__list.append(listItem);
@@ -477,7 +480,7 @@ function removingPopUpDetails() {
 }
 
 function popUpOfUserOpener() {
-  if (window.innerWidth >= 480) {
+  if (window.innerWidth <= 480) {
     if (users.length === 0) {
       document.getElementsByClassName("list__item__nobody").item(0).remove();
       let parent__list = document.getElementById("listOfUsersInfo"),
@@ -489,7 +492,9 @@ function popUpOfUserOpener() {
       infoSideBarOpener();
       document.getElementById("popUpOfUsers").style.display = "flex";
       users.forEach((item, index) => {
-        document.getElementById(`container-id-${index}`).remove();
+        try {
+          document.getElementById(`container-id-${index}`).remove();
+        } catch (error) {}
         let popUpUsername = document.getElementById("popUpUsername"),
           popUpDificulity = document
             .getElementsByClassName("pop-up__dificulity")

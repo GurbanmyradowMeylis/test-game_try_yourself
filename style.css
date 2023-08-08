@@ -1,8 +1,8 @@
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
 /* ! nullish styles */
 * {
+  font-family: cursive, Arial, Helvetica, monospace, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,6 +12,10 @@ ul,
 ol {
   list-style: none;
 }
+h1 {
+  font-weight: 400;
+}
+
 /* ! end nullish styles */
 
 /* ! form */
@@ -596,7 +600,7 @@ select option {
   .info__dificulity,
   .info__passed,
   #points {
-    font-weight: 600;
+    font-weight: 400;
   }
   .info__level {
     gap: 3px;
@@ -720,8 +724,7 @@ select option {
 
   .pop-up__exit {
     align-self: center;
-    padding: 7px 55px;
-
+    padding: 10px 55px 5px;
     color: #fff;
     font-size: 18px;
     border: none;
@@ -734,6 +737,10 @@ select option {
     display: none;
     min-height: 100vh;
     justify-content: center;
+  }
+
+  .less-weight {
+    font-weight: 400;
   }
 
   .info {
@@ -801,7 +808,7 @@ select option {
   .info__dificulity,
   .info__passed,
   #points {
-    font-weight: 600;
+    font-weight: 400;
   }
   .info__level {
     gap: 3px;
