@@ -76,6 +76,7 @@ function fromSignIn() {
 function startingTest() {
   informationOfUser();
   creatingInfo();
+  document.getElementById("listOfUsersInfo").onclick = popUpOfUserOpener;
   showingQuestions();
   document.getElementById("name").value = "";
 }
@@ -113,7 +114,6 @@ function creatingInfo() {
 
       // ! on click arrow
       itemUser.onclick = () => {
-        popUpOfUserOpener();
         let status = document.querySelector(`#item__arrow-${index}`).classList;
         let itemUser1 = document.querySelector(
             `#item__user-${index}`
@@ -123,6 +123,7 @@ function creatingInfo() {
         status.toggle("list__arrow-click");
 
         itemUser1.toggle("item__user-active");
+
         if (checkingUserProperty(item.easy)) tempArray.push(item.easy);
         if (checkingUserProperty(item.medium)) tempArray.push(item.medium);
         if (checkingUserProperty(item.hard)) tempArray.push(item.hard);
@@ -303,11 +304,11 @@ function informationOfUser() {
 // ! to manage color of dificulity
 function colorChanger(span) {
   if (currentDificulity == "easy") {
-    span.className = "green";
+    span.style.color = "#149e0a";
   } else if (currentDificulity == "medium") {
-    span.className = "yellow";
+    span.style.color = "#FFCF00";
   } else if (currentDificulity == "hard") {
-    span.className = "red";
+    span.style.color = "#EC0000";
   }
 }
 
@@ -476,9 +477,43 @@ function removingPopUpDetails() {
 }
 
 function popUpOfUserOpener() {
-  infoSideBarOpener();
-  let popUpOfUsers = document.getElementById("popUpOfUsers");
-  popUpOfUsers.style.display = "flex";
+  if (window.innerWidth >= 480) {
+    if (users.length === 0) {
+      document.getElementsByClassName("list__item__nobody").item(0).remove();
+      let parent__list = document.getElementById("listOfUsersInfo"),
+        info = document.createElement("p");
+      info.innerText = "while no one is there";
+      info.className = "list__item__nobody";
+      parent__list.append(info);
+    } else {
+      infoSideBarOpener();
+      document.getElementById("popUpOfUsers").style.display = "flex";
+      users.forEach((item, index) => {
+        document.getElementById(`container-id-${index}`).remove();
+        let popUpUsername = document.getElementById("popUpUsername"),
+          popUpDificulity = document
+            .getElementsByClassName("pop-up__dificulity")
+            .item(0),
+          contentTest = document
+            .getElementsByClassName("content__test")
+            .item(0),
+          popUpPoints = document
+            .getElementsByClassName("content__points")
+            .item(0);
+        popUpUsername.textContent = item.username;
+        let tempArray = [];
+        if (checkingUserProperty(item.easy)) tempArray.push(item.easy);
+        if (checkingUserProperty(item.medium)) tempArray.push(item.medium);
+        if (checkingUserProperty(item.hard)) tempArray.push(item.hard);
+        tempArray.forEach((item1) => {
+          popUpDificulity.textContent = item1.dificulity;
+          colorChanger(popUpDificulity);
+          contentTest.textContent = item1.rightAnswers;
+          popUpPoints.textContent = item1.points;
+        });
+      });
+    }
+  }
 }
 
 function infoSideBarOpener() {

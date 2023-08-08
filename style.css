@@ -485,9 +485,6 @@ select option {
 }
 
 .pop-up__dificulity {
-  /* ! easy color: #149e0a;  ===============================================================================================================================================================================================================
-  /* ! medium color : #FFCF00;  ===============================================================================================================================================================================================================
-  /* ! hard color : #EC0000;  =============================================================================================================================================================================================================== */
   font-size: 14px;
 }
 
@@ -710,7 +707,26 @@ select option {
     text-align: center;
   }
 
-  .pop-up__img-tick {
+  .pop-up__passed-tests {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 15px;
+  }
+  .pop-up__points {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 15px;
+  }
+
+  .pop-up__exit {
+    align-self: center;
+    padding: 7px 55px;
+
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 18px;
+    background-color: #149e0a;
   }
 
   #wrapper {
@@ -731,7 +747,7 @@ select option {
 
   .left {
     position: fixed;
-    width: 90vw;
+    width: 60vw;
     padding: 0;
     z-index: 2;
     transition: all 1s;
@@ -761,11 +777,6 @@ select option {
     display: block;
   }
 
-  .disabled,
-  .left {
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-
   .info__content {
     border-radius: 0px;
     box-shadow: 0px 0px 0px;
@@ -776,6 +787,9 @@ select option {
   }
 
   .list__arrow {
+    transform: rotate(90deg);
+  }
+  #popUpOfUsers {
     display: none;
   }
 
@@ -833,10 +847,10 @@ select option {
   }
 
   .try-again__content {
-    gap: 10px;
+    gap: 15px;
   }
   .try-again__pop-up___content {
-    gap: 5px;
+    gap: 15px;
   }
   .info__content {
     gap: 10px;
