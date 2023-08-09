@@ -76,7 +76,7 @@ function fromSignIn() {
 function startingTest() {
   informationOfUser();
   creatingInfo();
-  document.getElementById("listOfUsersInfo").onclick = popUpOfUserOpener;
+  popUpOfUserOpener();
   showingQuestions();
   document.getElementById("name").value = "";
 }
@@ -292,16 +292,6 @@ function informationOfUser() {
     gettingCurrentTest().length
   }`;
   points.innerText = `Points : ${currentPoints}`;
-  // ! for phones
-  let overlay = document.getElementById("popUpOfUsers");
-  let closer = document.getElementById("closer");
-
-  closer.onclick = () => {
-    overlay.style.display = "none";
-  };
-  overlay.onclick = () => {
-    overlay.style.display = "none";
-  };
 }
 
 // ! to manage color of dificulity
@@ -481,43 +471,78 @@ function removingPopUpDetails() {
 
 function popUpOfUserOpener() {
   if (window.innerWidth <= 480) {
-    if (users.length === 0) {
-      document.getElementsByClassName("list__item__nobody").item(0).remove();
-      let parent__list = document.getElementById("listOfUsersInfo"),
-        info = document.createElement("p");
-      info.innerText = "while no one is there";
-      info.className = "list__item__nobody";
-      parent__list.append(info);
-    } else {
-      infoSideBarOpener();
-      document.getElementById("popUpOfUsers").style.display = "flex";
-      users.forEach((item, index) => {
-        try {
-          document.getElementById(`container-id-${index}`).remove();
-        } catch (error) {}
-        let popUpUsername = document.getElementById("popUpUsername"),
-          popUpDificulity = document
-            .getElementsByClassName("pop-up__dificulity")
-            .item(0),
-          contentTest = document
-            .getElementsByClassName("content__test")
-            .item(0),
-          popUpPoints = document
-            .getElementsByClassName("content__points")
-            .item(0);
-        popUpUsername.textContent = item.username;
+    users.forEach((item, index) => {
+      let itemUser = document.getElementById(`item__user-${index}`);
+
+      // ! on click arrow
+      itemUser.onclick = () => {
+        infoSideBarOpener();
+        document.getElementById("popUpOfUsers").style.display = "flex";
         let tempArray = [];
         if (checkingUserProperty(item.easy)) tempArray.push(item.easy);
         if (checkingUserProperty(item.medium)) tempArray.push(item.medium);
         if (checkingUserProperty(item.hard)) tempArray.push(item.hard);
+        console.log(tempArray);
+        let username = document
+          .getElementsByClassName("pop-up__header")
+          .item(2);
         tempArray.forEach((item1) => {
-          popUpDificulity.textContent = item1.dificulity;
-          colorChanger(popUpDificulity);
-          contentTest.textContent = item1.rightAnswers;
-          popUpPoints.textContent = item1.points;
+          let tests = document.createElement("p"),
+            dificulity = document.createElement("p"),
+            points = document.createElement("p"),
+            parent = document.createElement("li"),
+            parentOfPassedTests = document.createElement("div"),
+            parentOfPoints = document.createElement("div"),
+            testsImg = document.createElement("img"),
+            pointsImg = document.createElement("img"),
+            divider = document.createElement("hr");
+          username.innerText = item.username;
+          testsImg.src = "./tick.svg";
+
+          pointsImg.src = "./circle.svg";
+          parent.className = "pop-up__list___item";
+          parentOfPassedTests.className = "pop-up__passed-tests";
+          parentOfPoints.className = "pop-up__points";
+
+          if (item1.dificulity == "easy") {
+            dificulity.style.color = "#149e0a";
+          } else if (item1.dificulity == "medium") {
+            dificulity.style.color = "#FFCF00";
+          } else if (item1.dificulity == "hard") {
+            dificulity.style.color = "#EC0000";
+          }
+
+          dificulity.className = "pop-up__dificulity";
+          points.className = "content__points";
+          tests.className = "content__test";
+          dificulity.innerText = item1.dificulity;
+          points.innerText = item1.points;
+          tests.innerText = item1.rightAnswers;
+          document.getElementById("listOfUsersInPopUp").append(parent);
+          parent.append(
+            dificulity,
+            parentOfPassedTests,
+            divider,
+            parentOfPoints
+          );
+          parentOfPassedTests.append(testsImg, tests);
+          parentOfPoints.append(pointsImg, points);
         });
-      });
-    }
+      };
+    });
+
+    document.getElementById("closer").onclick = () => {
+      document.getElementsByClassName("pop-up__list___item").item(0).remove();
+      let parent = document.createElement("li");
+      parent.className = "pop-up__list___item";
+      document.getElementById("popUpOfUsers").style.display = "none";
+    };
+    document.getElementById("popUpOfUsers").onclick = () => {
+      document.getElementsByClassName("pop-up__list___item").item(0).remove();
+      let parent = document.createElement("li");
+      parent.className = "pop-up__list___item";
+      document.getElementById("popUpOfUsers").style.display = "none";
+    };
   }
 }
 

@@ -1,9 +1,8 @@
 /* ! nullish styles */
 * {
-  font-family: cursive, Arial, Helvetica, monospace, system-ui, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
-    "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
+
   padding: 0;
   box-sizing: border-box;
 }
@@ -701,13 +700,11 @@ select option {
   .pop-up__list___item {
     position: relative;
     width: 200px;
-    height: 100px;
+    height: 80px;
     border-radius: 10px;
     background-color: #eeeeee;
   }
   .pop-up__dificulity {
-    color: #ec0000; /*todo ============================================================================================================== */
-    margin-top: 5px;
     text-align: center;
   }
 
@@ -723,6 +720,7 @@ select option {
   }
 
   .pop-up__exit {
+    order: 2;
     align-self: center;
     padding: 10px 55px 5px;
     color: #fff;
@@ -850,16 +848,23 @@ select option {
   }
 
   .popup .content {
-    gap: 10px;
+    gap: 5px;
   }
 
   .try-again__content {
-    gap: 15px;
+    gap: 5px;
   }
   .try-again__pop-up___content {
-    gap: 15px;
+    gap: 5px;
   }
   .info__content {
     gap: 10px;
+  }
+  .item__user {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+  .item__results {
+    display: none;
   }
 }
