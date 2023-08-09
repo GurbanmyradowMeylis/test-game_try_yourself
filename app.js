@@ -518,31 +518,33 @@ function popUpOfUserOpener() {
           dificulity.innerText = item1.dificulity;
           points.innerText = item1.points;
           tests.innerText = item1.rightAnswers;
-          document.getElementById("listOfUsersInPopUp").append(parent);
           parent.append(
             dificulity,
             parentOfPassedTests,
             divider,
             parentOfPoints
           );
+          document.getElementById("listOfUsersInPopUp").append(parent);
           parentOfPassedTests.append(testsImg, tests);
           parentOfPoints.append(pointsImg, points);
         });
       };
     });
 
-    document.getElementById("closer").onclick = () => {
-      document.getElementsByClassName("pop-up__list___item").item(0).remove();
-      let parent = document.createElement("li");
-      parent.className = "pop-up__list___item";
+    function remover() {
+      document.getElementById("listOfUsersInPopUp").remove();
+      let parent = document.createElement("ol");
+      parent.id = "listOfUsersInPopUp";
+      parent.className = "list__lists";
+      document
+        .getElementsByClassName("item__user___content")
+        .item(0)
+        .append(parent);
       document.getElementById("popUpOfUsers").style.display = "none";
-    };
-    document.getElementById("popUpOfUsers").onclick = () => {
-      document.getElementsByClassName("pop-up__list___item").item(0).remove();
-      let parent = document.createElement("li");
-      parent.className = "pop-up__list___item";
-      document.getElementById("popUpOfUsers").style.display = "none";
-    };
+    }
+    document.getElementById("closer").onclick = remover;
+
+    document.getElementsByClassName("pop-up__exit").item(0).onclick = remover;
   }
 }
 
