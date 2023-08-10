@@ -367,7 +367,7 @@ select option {
 }
 
 .popup {
-  padding: 20px;
+  padding: 30px 20px;
   background: #fff;
   border-radius: 5px;
   display: flex;
@@ -378,12 +378,13 @@ select option {
   max-height: 30%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 71px;
 }
 
 .pop-up__header {
-  text-align: center;
+  /* text-align: center; */
   font-size: 25px;
+  /* align-self: center; */
   order: 0;
 }
 
@@ -395,7 +396,7 @@ select option {
 }
 .popup .pop-up__buttons {
   display: flex;
-  gap: 15px;
+  gap: inherit;
   order: 2;
 }
 
@@ -681,11 +682,11 @@ select option {
   .pop-up__header,
   .list__item__nobody,
   .info__list a {
-    font-size: 30px;
+    font-size: 25px;
   }
   .popup .content h1,
   .info__username {
-    font-size: 34px;
+    font-size: 30px;
   }
   #tryAgainDificulity {
     font-size: 20px;
@@ -821,7 +822,7 @@ select option {
   .pop-up__button,
   .pop-up__button1 {
     padding: 7px 7px;
-    font-size: 20px;
+    font-size: 15px;
   }
 
   .item__user,
@@ -848,14 +849,14 @@ select option {
   }
 
   .popup .content {
-    gap: 5px;
+    gap: 15px;
   }
 
   .try-again__content {
     gap: 5px;
   }
   .try-again__pop-up___content {
-    gap: 5px;
+    gap: 3px;
   }
   .info__content {
     gap: 10px;

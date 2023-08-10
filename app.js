@@ -104,7 +104,7 @@ function creatingInfo() {
       itemUser.className = "item__user";
       itemUser.id = `item__user-${index}`;
       username.innerText = item.username;
-      arrow.src = "./arrow.svg";
+      arrow.src = "./svgs/arrow.svg";
       arrow.className = "list__arrow";
       arrow.id = `item__arrow-${index}`;
 
@@ -210,7 +210,7 @@ function showingQuestions() {
     test__button.innerText = item1.answer;
     test__button.onclick = () => {
       let img = document.createElement("img");
-      img.src = "./circle-check-regular.svg";
+      img.src = "./svgs/circle-check-regular.svg";
       img.className = "test__img";
       test__button.append(img);
       // ! checking passed test if right ++
@@ -497,9 +497,9 @@ function popUpOfUserOpener() {
             pointsImg = document.createElement("img"),
             divider = document.createElement("hr");
           username.innerText = item.username;
-          testsImg.src = "./tick.svg";
+          testsImg.src = "./svgs/tick.svg";
 
-          pointsImg.src = "./circle.svg";
+          pointsImg.src = "./svgs/circle.svg";
           parent.className = "pop-up__list___item";
           parentOfPassedTests.className = "pop-up__passed-tests";
           parentOfPoints.className = "pop-up__points";
