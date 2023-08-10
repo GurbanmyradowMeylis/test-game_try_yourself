@@ -3,172 +3,172 @@
     "easy": {
       "questions": [
         {
-          "question": "1. What is the answer to this question? Have you seen her?",
+          "question": "1. What is the past tense of the verb 'go'?",
           "answers": [
             {
-              "answer": "Yes, I did.",
-              "isRight": false
-            },
-            {
-              "answer": "Yes, I saw.",
-              "isRight": false
-            },
-            {
-              "answer": "Yes, I have.",
-              "isRight": true
-            }
-          ]
-        },
-        {
-          "question": "2. Which word is a synonym for 'happy'?",
-          "answers": [
-            {
-              "answer": "Sad",
-              "isRight": false
-            },
-            {
-              "answer": "Joyful",
+              "answer": "went",
               "isRight": true
             },
             {
-              "answer": "Angry",
+              "answer": "gone",
+              "isRight": false
+            },
+            {
+              "answer": "goed",
               "isRight": false
             }
           ]
         },
         {
-          "question": "3. Choose the correct spelling of the word: 'beautiful'",
+          "question": "2. Which pronoun is used to refer to a female person?",
           "answers": [
             {
-              "answer": "Beautifull",
+              "answer": "he",
               "isRight": false
             },
             {
-              "answer": "Beutiful",
-              "isRight": false
-            },
-            {
-              "answer": "Beautiful",
-              "isRight": true
-            }
-          ]
-        },
-        {
-          "question": "4. What is the opposite of 'dark'?",
-          "answers": [
-            {
-              "answer": "Bright",
+              "answer": "she",
               "isRight": true
             },
             {
-              "answer": "Gloomy",
-              "isRight": false
-            },
-            {
-              "answer": "Shadowy",
+              "answer": "it",
               "isRight": false
             }
           ]
         },
         {
-          "question": "5. How do you spell the number 11?",
+          "question": "3. What is the opposite of the word 'happy'?",
           "answers": [
             {
-              "answer": "Eleven",
+              "answer": "sad",
               "isRight": true
             },
             {
-              "answer": "Elevn",
+              "answer": "angry",
               "isRight": false
             },
             {
-              "answer": "Elleven",
+              "answer": "excited",
               "isRight": false
             }
           ]
         },
         {
-          "question": "6. Choose the correct form of the verb to complete the sentence: He ________ to school every day.",
+          "question": "4. Which word is a verb in the sentence: 'She sings beautifully'?",
           "answers": [
             {
-              "answer": "Goes",
-              "isRight": true
-            },
-            {
-              "answer": "Go",
+              "answer": "she",
               "isRight": false
             },
             {
-              "answer": "Went",
-              "isRight": false
-            }
-          ]
-        },
-        {
-          "question": "7. What is the plural form of 'child'?",
-          "answers": [
-            {
-              "answer": "Childs",
+              "answer": "beautifully",
               "isRight": false
             },
             {
-              "answer": "Children",
-              "isRight": true
-            },
-            {
-              "answer": "Childes",
-              "isRight": false
-            }
-          ]
-        },
-        {
-          "question": "8. Which sentence is correct?",
-          "answers": [
-            {
-              "answer": "Me and him went to the park.",
-              "isRight": false
-            },
-            {
-              "answer": "Him and I went to the park.",
-              "isRight": false
-            },
-            {
-              "answer": "He and I went to the park.",
+              "answer": "sings",
               "isRight": true
             }
           ]
         },
         {
-          "question": "9. Choose the correct form of the verb to complete the sentence: They ________ soccer every weekend.",
+          "question": "5. What is the plural form of the word 'cat'?",
           "answers": [
             {
-              "answer": "Plays",
-              "isRight": false
-            },
-            {
-              "answer": "Play",
+              "answer": "cats",
               "isRight": true
             },
             {
-              "answer": "Played",
+              "answer": "caties",
+              "isRight": false
+            },
+            {
+              "answer": "catz",
               "isRight": false
             }
           ]
         },
         {
-          "question": "10. What is the past tense of 'go'?",
+          "question": "6. Which word is a conjunction in the sentence: 'I like both tea and coffee'?",
           "answers": [
             {
-              "answer": "Went",
+              "answer": "I",
+              "isRight": false
+            },
+            {
+              "answer": "like",
+              "isRight": false
+            },
+            {
+              "answer": "and",
+              "isRight": true
+            }
+          ]
+        },
+        {
+          "question": "7. What is the superlative form of the adjective 'big'?",
+          "answers": [
+            {
+              "answer": "bigger",
+              "isRight": false
+            },
+            {
+              "answer": "biggest",
               "isRight": true
             },
             {
-              "answer": "Gone",
+              "answer": "biglier",
+              "isRight": false
+            }
+          ]
+        },
+        {
+          "question": "8. Which word is a preposition in the sentence: 'The book is on the table'?",
+          "answers": [
+            {
+              "answer": "book",
               "isRight": false
             },
             {
-              "answer": "Goed",
+              "answer": "is",
               "isRight": false
+            },
+            {
+              "answer": "on",
+              "isRight": true
+            }
+          ]
+        },
+        {
+          "question": "9. What is the comparative form of the adjective 'good'?",
+          "answers": [
+            {
+              "answer": "gooder",
+              "isRight": false
+            },
+            {
+              "answer": "better",
+              "isRight": true
+            },
+            {
+              "answer": "goodest",
+              "isRight": false
+            }
+          ]
+        },
+        {
+          "question": "10. Which word is an adverb in the sentence: 'He runs quickly'?",
+          "answers": [
+            {
+              "answer": "he",
+              "isRight": false
+            },
+            {
+              "answer": "runs",
+              "isRight": false
+            },
+            {
+              "answer": "quickly",
+              "isRight": true
             }
           ]
         }
@@ -177,172 +177,196 @@
     "medium": {
       "questions": [
         {
-          "question": "1. Choose the correct form of the verb in the sentence: 'I ____ my homework yesterday.'",
+          "question": "1. Identify the verb phrase in the sentence: 'She is playing the piano.'",
           "answers": [
             {
-              "answer": "Do",
-              "isRight": false
-            },
-            {
-              "answer": "Did",
+              "answer": "is playing",
               "isRight": true
             },
             {
-              "answer": "Done",
+              "answer": "playing the piano",
+              "isRight": false
+            },
+            {
+              "answer": "she is",
               "isRight": false
             }
           ]
         },
         {
-          "question": "2. Which word is a noun? 'Happiness'",
+          "question": "2. Choose the correct form of the verb to complete the sentence: 'I ________ swimming every week.'",
           "answers": [
             {
-              "answer": "Happily",
+              "answer": "go",
               "isRight": false
             },
             {
-              "answer": "Happy",
+              "answer": "am going",
               "isRight": false
             },
             {
-              "answer": "Happiness",
+              "answer": "goes",
+              "isRight": false
+            },
+            {
+              "answer": "go swimming",
               "isRight": true
             }
           ]
         },
         {
-          "question": "3. What is the opposite of 'brave'?",
+          "question": "3. Which word is a pronoun in the sentence: 'John gave me the book.'",
           "answers": [
             {
-              "answer": "Fearless",
+              "answer": "John",
               "isRight": false
             },
             {
-              "answer": "Courageous",
+              "answer": "gave",
               "isRight": false
             },
             {
-              "answer": "Cowardly",
-              "isRight": true
-            }
-          ]
-        },
-        {
-          "question": "4. Choose the correct spelling for the word 'accommodate'",
-          "answers": [
-            {
-              "answer": "Accomodate",
-              "isRight": false
-            },
-            {
-              "answer": "Accommmodate",
-              "isRight": false
-            },
-            {
-              "answer": "Accommodate",
-              "isRight": true
-            }
-          ]
-        },
-        {
-          "question": "5. Which preposition is correct? 'She lives ___ Paris.'",
-          "answers": [
-            {
-              "answer": "At",
-              "isRight": false
-            },
-            {
-              "answer": "On",
-              "isRight": false
-            },
-            {
-              "answer": "In",
-              "isRight": true
-            }
-          ]
-        },
-        {
-          "question": "6. What is the plural form of 'child'?",
-          "answers": [
-            {
-              "answer": "Childs",
-              "isRight": false
-            },
-            {
-              "answer": "Children",
+              "answer": "me",
               "isRight": true
             },
             {
-              "answer": "Childes",
+              "answer": "book",
               "isRight": false
             }
           ]
         },
         {
-          "question": "7. Choose the correct form of the verb in the sentence: 'She ____ her keys this morning.'",
+          "question": "4. What is the comparative form of the adjective 'beautiful'?",
           "answers": [
             {
-              "answer": "Lose",
-              "isRight": false
-            },
-            {
-              "answer": "Lost",
+              "answer": "more beautiful",
               "isRight": true
             },
             {
-              "answer": "Loose",
+              "answer": "beautifuler",
+              "isRight": false
+            },
+            {
+              "answer": "beautifuller",
               "isRight": false
             }
           ]
         },
         {
-          "question": "8. Which sentence is grammatically correct?",
+          "question": "5. Choose the correct form of the verb to complete the sentence: 'She ________ to the party last night.'",
           "answers": [
             {
-              "answer": "He don't like apples.",
+              "answer": "go",
               "isRight": false
             },
             {
-              "answer": "They doesn't play tennis.",
-              "isRight": false
-            },
-            {
-              "answer": "She is reading a book.",
-              "isRight": true
-            }
-          ]
-        },
-        {
-          "question": "9. What is the past tense of 'sing'?",
-          "answers": [
-            {
-              "answer": "Sang",
+              "answer": "went",
               "isRight": true
             },
             {
-              "answer": "Singed",
+              "answer": "goes",
               "isRight": false
             },
             {
-              "answer": "Sung",
+              "answer": "going",
               "isRight": false
             }
           ]
         },
         {
-          "question": "10. Choose the correct form of the verb in the sentence: 'We ____ to the beach last summer.'",
+          "question": "6. Identify the adverb in the sentence: 'He speaks very loudly.'",
           "answers": [
             {
-              "answer": "Went",
+              "answer": "he",
+              "isRight": false
+            },
+            {
+              "answer": "speaks",
+              "isRight": false
+            },
+            {
+              "answer": "very",
               "isRight": true
             },
             {
-              "answer": "Goed",
+              "answer": "loudly",
+              "isRight": false
+            }
+          ]
+        },
+        {
+          "question": "7. Choose the correct form of the verb to complete the sentence: 'They ________ a movie last night.'",
+          "answers": [
+            {
+              "answer": "watched",
+              "isRight": true
+            },
+            {
+              "answer": "watch",
               "isRight": false
             },
             {
-              "answer": "Goes",
+              "answer": "watches",
               "isRight": false
+            },
+            {
+              "answer": "watching",
+              "isRight": false
+            }
+          ]
+        },
+        {
+          "question": "8. What is the plural form of the word 'child'?",
+          "answers": [
+            {
+              "answer": "childs",
+              "isRight": false
+            },
+            {
+              "answer": "children",
+              "isRight": true
+            },
+            {
+              "answer": "childies",
+              "isRight": false
+            }
+          ]
+        },
+        {
+          "question": "9. Identify the adjective in the sentence: 'The red car is fast.'",
+          "answers": [
+            {
+              "answer": "red",
+              "isRight": true
+            },
+            {
+              "answer": "car",
+              "isRight": false
+            },
+            {
+              "answer": "is",
+              "isRight": false
+            }
+          ]
+        },
+        {
+          "question": "10. Choose the correct form of the verb to complete the sentence: 'She ________ for an hour.'",
+          "answers": [
+            {
+              "answer": "is waiting",
+              "isRight": false
+            },
+            {
+              "answer": "wait",
+              "isRight": false
+            },
+            {
+              "answer": "waits",
+              "isRight": false
+            },
+            {
+              "answer": "has been waiting",
+              "isRight": true
             }
           ]
         }
@@ -351,171 +375,191 @@
     "hard": {
       "questions": [
         {
-          "question": "1. What is the past tense of 'go'?",
+          "question": "1. Identify the type of clause in the sentence: 'Although it was raining, they went for a walk.'",
           "answers": [
             {
-              "answer": "Goed",
+              "answer": "adjective clause",
               "isRight": false
             },
             {
-              "answer": "Went",
+              "answer": "adverb clause",
               "isRight": true
             },
             {
-              "answer": "Gone",
+              "answer": "noun clause",
               "isRight": false
             }
           ]
         },
         {
-          "question": "2. Which word is a synonym for 'happy'?",
+          "question": "2. Choose the correct form of the verb to complete the sentence: 'If I ________ you, I would apologize.'",
           "answers": [
             {
-              "answer": "Sad",
-              "isRight": false
-            },
-            {
-              "answer": "Joyful",
+              "answer": "were",
               "isRight": true
             },
             {
-              "answer": "Angry",
+              "answer": "am",
+              "isRight": false
+            },
+            {
+              "answer": "was",
+              "isRight": false
+            },
+            {
+              "answer": "is",
               "isRight": false
             }
           ]
         },
         {
-          "question": "3. What is the plural form of 'child'?",
+          "question": "3. Identify the voice of the verb in the sentence: 'The book was written by John.'",
           "answers": [
             {
-              "answer": "Childs",
+              "answer": "active voice",
               "isRight": false
             },
             {
-              "answer": "Children",
-              "isRight": true
-            },
-            {
-              "answer": "Childes",
-              "isRight": false
-            }
-          ]
-        },
-        {
-          "question": "4. Which sentence is grammatically correct?",
-          "answers": [
-            {
-              "answer": "She don't like apples.",
-              "isRight": false
-            },
-            {
-              "answer": "He doesn't likes apples.",
-              "isRight": false
-            },
-            {
-              "answer": "They don't like apples.",
+              "answer": "passive voice",
               "isRight": true
             }
           ]
         },
         {
-          "question": "5. What is the opposite of 'hot'?",
+          "question": "4. Choose the correct form of the verb to complete the sentence: 'She ________ in this company for ten years.'",
           "answers": [
             {
-              "answer": "Warm",
+              "answer": "works",
               "isRight": false
             },
             {
-              "answer": "Cold",
+              "answer": "has worked",
               "isRight": true
             },
             {
-              "answer": "Cool",
+              "answer": "worked",
+              "isRight": false
+            },
+            {
+              "answer": "is working",
               "isRight": false
             }
           ]
         },
         {
-          "question": "6. Which word is a verb?",
+          "question": "5. Identify the type of sentence: 'Go to bed!'",
           "answers": [
             {
-              "answer": "Apple",
+              "answer": "declarative",
               "isRight": false
             },
             {
-              "answer": "Run",
+              "answer": "imperative",
               "isRight": true
             },
             {
-              "answer": "Table",
+              "answer": "interrogative",
+              "isRight": false
+            },
+            {
+              "answer": "exclamatory",
               "isRight": false
             }
           ]
         },
         {
-          "question": "7. What is the capital city of France?",
+          "question": "6. Choose the correct form of the verb to complete the sentence: 'If she ________ harder, she would have passed the exam.'",
           "answers": [
             {
-              "answer": "London",
+              "answer": "studies",
               "isRight": false
             },
             {
-              "answer": "Paris",
+              "answer": "studied",
+              "isRight": false
+            },
+            {
+              "answer": "had studied",
               "isRight": true
             },
             {
-              "answer": "Madrid",
+              "answer": "is studying",
               "isRight": false
             }
           ]
         },
         {
-          "question": "8. Which sentence is in the present continuous tense?",
+          "question": "7. Identify the type of adjective in the sentence: 'This is the most expensive car I have ever seen.'",
           "answers": [
             {
-              "answer": "I will go to the store.",
+              "answer": "comparative adjective",
               "isRight": false
             },
             {
-              "answer": "She went to the park.",
-              "isRight": false
-            },
-            {
-              "answer": "He is playing football.",
-              "isRight": true
-            }
-          ]
-        },
-        {
-          "question": "9. What is the plural form of 'mouse'?",
-          "answers": [
-            {
-              "answer": "Mouses",
-              "isRight": false
-            },
-            {
-              "answer": "Mice",
+              "answer": "superlative adjective",
               "isRight": true
             },
             {
-              "answer": "Mices",
+              "answer": "descriptive adjective",
               "isRight": false
             }
           ]
         },
         {
-          "question": "10. Which word is an adverb?",
+          "question": "8. Choose the correct form of the verb to complete the sentence: 'They ________ to the party if they had known about it.'",
           "answers": [
             {
-              "answer": "Quickly",
-              "isRight": true
-            },
-            {
-              "answer": "Book",
+              "answer": "would go",
               "isRight": false
             },
             {
-              "answer": "Tall",
+              "answer": "would have gone",
+              "isRight": true
+            },
+            {
+              "answer": "will go",
+              "isRight": false
+            },
+            {
+              "answer": "have gone",
+              "isRight": false
+            }
+          ]
+        },
+        {
+          "question": "9. Identify the type of conjunction in the sentence: 'I will go to the store and buy some groceries.'",
+          "answers": [
+            {
+              "answer": "coordinating conjunction",
+              "isRight": true
+            },
+            {
+              "answer": "subordinating conjunction",
+              "isRight": false
+            },
+            {
+              "answer": "correlative conjunction",
+              "isRight": false
+            }
+          ]
+        },
+        {
+          "question": "10. Choose the correct form of the verb to complete the sentence: 'If he ________ the train, he would have arrived on time.'",
+          "answers": [
+            {
+              "answer": "catch",
+              "isRight": false
+            },
+            {
+              "answer": "caught",
+              "isRight": true
+            },
+            {
+              "answer": "catches",
+              "isRight": false
+            },
+            {
+              "answer": "catching",
               "isRight": false
             }
           ]

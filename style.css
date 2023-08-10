@@ -281,6 +281,10 @@ select option {
   font-weight: 500;
   color: white;
   transition: all 0.1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 1 150px;
 }
 
 .test__button:hover {
@@ -298,6 +302,7 @@ select option {
   display: flex;
   align-items: center;
   font-size: 17px;
+  flex: 0 1 150px;
   font-weight: 500;
   color: white;
   padding: 7px 14px;
@@ -306,11 +311,13 @@ select option {
   border: none;
   border-radius: 5px;
   gap: 10px;
+  justify-content: space-around;
 }
 
 .red-answer {
   display: flex;
   align-items: center;
+  flex: 0 1 150px;
   font-size: 17px;
   font-weight: 500;
   color: white;
@@ -320,6 +327,7 @@ select option {
   border-radius: 5px;
   background-color: #ae1c4f;
   gap: 10px;
+  justify-content: space-around;
 }
 
 .test__img {
@@ -613,7 +621,7 @@ select option {
   .pop-up__button,
   .pop-up__button1 {
     padding: 3.7px 7px;
-    font-size: 10px;
+    font-size: 16px;
   }
 
   .item__user,
@@ -622,13 +630,18 @@ select option {
   }
 
   .test__img {
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 15px;
   }
 
   .red-answer,
-  .green-answer {
+  .green-answer,
+  .test__button {
     gap: 5px;
+    flex: 0 1 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .test__buttons {
@@ -682,7 +695,7 @@ select option {
   .pop-up__header,
   .list__item__nobody,
   .info__list a {
-    font-size: 25px;
+    font-size: 18px;
   }
   .popup .content h1,
   .info__username {
@@ -821,8 +834,8 @@ select option {
   .green-answer,
   .pop-up__button,
   .pop-up__button1 {
-    padding: 7px 7px;
-    font-size: 15px;
+    padding: 3.5px 7px;
+    font-size: 16px;
   }
 
   .item__user,
@@ -831,13 +844,19 @@ select option {
   }
 
   .test__img {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
   }
 
   .red-answer,
-  .green-answer {
+  .green-answer,
+  .test__button {
     gap: 5px;
+    flex: 1 1 0px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .test__buttons {
