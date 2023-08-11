@@ -134,7 +134,7 @@ select option {
   padding-bottom: 10px;
 }
 
-/* ! changing degree of svg image */
+/* ! changing degree of arrow */
 .list__arrow {
   width: 10px;
   height: 10px;
@@ -148,7 +148,7 @@ select option {
   transform: rotate(180deg);
   transition: transform 0.5s;
 }
-/* ! end changing degree of svg image */
+/* ! end changing degree of arrow image */
 
 .info__list {
   display: flex;
@@ -174,6 +174,7 @@ select option {
   background: grey;
   border-radius: 10px;
 }
+/* ! end of customizer of scrollbar */
 
 .list__lists {
   display: flex;
@@ -222,6 +223,7 @@ select option {
 }
 /* ! end list's dropdown  */
 
+/* ! results after clicking item user */
 .item__results {
   text-align: left;
   display: flex;
@@ -240,6 +242,7 @@ select option {
   height: 2px;
   background-color: black;
 }
+/* ! end of results */
 /* ! end info's list section */
 /* ! end info */
 
@@ -298,6 +301,7 @@ select option {
   transition: all 3ms;
 }
 
+/* ! right answer of question */
 .green-answer {
   display: flex;
   align-items: center;
@@ -313,7 +317,9 @@ select option {
   gap: 10px;
   justify-content: space-around;
 }
+/* ! end right answer of question */
 
+/* ! wrong answer of question */
 .red-answer {
   display: flex;
   align-items: center;
@@ -329,14 +335,16 @@ select option {
   gap: 10px;
   justify-content: space-around;
 }
+/* ! end wrong answer of question */
 
+/* ! defines which button user clicked */
 .test__img {
   max-width: 30px;
   max-height: 30px;
 }
+/* ! end of these right, wrong, definer classes */
 
-/* ! pop up ========================================= */
-
+/* ! pop up that will appear after usre pass the test */
 .button {
   padding: 7px 14px;
   cursor: pointer;
@@ -390,9 +398,7 @@ select option {
 }
 
 .pop-up__header {
-  /* text-align: center; */
   font-size: 25px;
-  /* align-self: center; */
   order: 0;
 }
 
@@ -421,7 +427,9 @@ select option {
 .pop-up__button1 {
   order: 1;
 }
+/*! end first pop up */
 
+/* ! pop up after clicking try again */
 .try-again__overlay {
   position: fixed;
   z-index: 3;
@@ -446,7 +454,6 @@ select option {
 .try-again__content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 30px;
 }
@@ -456,10 +463,11 @@ select option {
 }
 
 .try-again__content button {
-  align-self: center;
-  width: 80%;
+  width: 100%;
 }
+/*! end of try again pop up */
 
+/* ! pop up after clicking item user for phones or screen width <= 480px */
 .item__user___overlay {
   z-index: 3;
   position: fixed;
@@ -478,7 +486,6 @@ select option {
   background: #fff;
   border-radius: 5px;
   position: relative;
-  /* transition: all 5s ease-in-out; */
 }
 
 .item__user___content {
@@ -495,6 +502,7 @@ select option {
   right: 0;
   top: 0;
 }
+/*! end pop up of item user  */
 
 .pop-up__dificulity {
   font-size: 14px;
@@ -504,11 +512,8 @@ select option {
   display: none;
 }
 
-/* * Large desktop */
-@media (min-width: 1200px) {
-}
-
-/* * Portrait tablet to landscape and desktop */
+/* ! media queries */
+/*! Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
   .list__points,
   .list__dificulity,
@@ -702,7 +707,7 @@ select option {
     font-size: 30px;
   }
   #tryAgainDificulity {
-    font-size: 20px;
+    font-size: 15px;
   }
 
   .item__user___pop-up {
@@ -826,8 +831,14 @@ select option {
     gap: 3px;
   }
 
-  #signIn,
-  #signUp,
+  #PopUPStart,
+  #singUp,
+  #singIn,
+  .pop-up__button,
+  .pop-up__button1 {
+    padding: 7px 14px;
+  }
+
   .button,
   .test__button,
   .red-answer,
@@ -872,7 +883,8 @@ select option {
   }
 
   .try-again__content {
-    gap: 5px;
+    gap: 25px;
+    width: 200px;
   }
   .try-again__pop-up___content {
     gap: 3px;
@@ -888,3 +900,4 @@ select option {
     display: none;
   }
 }
+/* ! end media queries */

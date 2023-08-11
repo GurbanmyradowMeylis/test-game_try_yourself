@@ -41,7 +41,9 @@ function signUpValidation() {
 document.getElementById("signUp").onclick = fromSignUp;
 function fromSignUp() {
   if (validation()) {
-    signUpValidation();
+    if (confirm("are sure to continue")) {
+      signUpValidation();
+    }
   } else {
     alert("write symbols more than 0 and less than 15");
   }
@@ -73,6 +75,7 @@ function fromSignIn() {
   }
 }
 
+// ! starts the tests creates tests
 function startingTest() {
   informationOfUser();
   creatingInfo();
@@ -221,7 +224,10 @@ function showingQuestions() {
         calculatingRightAnswers();
       }
       answerValidation(buttonsId, currentId);
-      window.location.href = `#container-${currentId}`;
+      if (window.innerWidth <= 480) {
+      } else {
+        window.location.href = `#container-${currentId}`;
+      }
     };
     test__buttons.append(test__button);
   });
@@ -420,12 +426,13 @@ function popUp() {
   // ! start clicked in try again pop up
   startTryAgain.onclick = () => {
     let inputDifficulty = document.getElementById("tryAgainDificulity").value;
-    tryAgainPopUp.style.display = "none";
     nullingAllGlobalVars(true);
     currentDificulity = inputDifficulty;
     removingPopUpDetails();
     removingInfoAndQuestions();
     startingTest();
+    let tryAgainPopUp = document.getElementById("tryAgainPopUp");
+    tryAgainPopUp.style.display = "none";
   };
 }
 
@@ -460,6 +467,7 @@ function nullingAllGlobalVars(isTryAgain) {
   }
 }
 
+// ! removes pop up details
 function removingPopUpDetails() {
   let popUp__results = document.getElementById("popUp__results");
   popUp__results.remove();
@@ -468,7 +476,7 @@ function removingPopUpDetails() {
   popUp__results1.className = "popUp__results";
   document.getElementsByClassName("content").item(0).append(popUp__results1);
 }
-
+// ! opens pop up that in info side bar when site visited phone or screen width <= 480px
 function popUpOfUserOpener() {
   if (window.innerWidth <= 480) {
     users.forEach((item, index) => {
@@ -548,6 +556,7 @@ function popUpOfUserOpener() {
   }
 }
 
+// ! opens info side bar when site visited phone or screen width <= 480px
 function infoSideBarOpener() {
   let infoSideBar = document.getElementById("infoSideBar");
   let infoArrow = document.getElementById("infoArrow");

@@ -177,196 +177,172 @@
     "medium": {
       "questions": [
         {
-          "question": "1. Identify the verb phrase in the sentence: 'She is playing the piano.'",
+          "question": "1.What is the correct plural form of the word 'child'?",
           "answers": [
-            {
-              "answer": "is playing",
-              "isRight": true
-            },
-            {
-              "answer": "playing the piano",
-              "isRight": false
-            },
-            {
-              "answer": "she is",
-              "isRight": false
-            }
-          ]
-        },
-        {
-          "question": "2. Choose the correct form of the verb to complete the sentence: 'I ________ swimming every week.'",
-          "answers": [
-            {
-              "answer": "go",
-              "isRight": false
-            },
-            {
-              "answer": "am going",
-              "isRight": false
-            },
-            {
-              "answer": "goes",
-              "isRight": false
-            },
-            {
-              "answer": "go swimming",
-              "isRight": true
-            }
-          ]
-        },
-        {
-          "question": "3. Which word is a pronoun in the sentence: 'John gave me the book.'",
-          "answers": [
-            {
-              "answer": "John",
-              "isRight": false
-            },
-            {
-              "answer": "gave",
-              "isRight": false
-            },
-            {
-              "answer": "me",
-              "isRight": true
-            },
-            {
-              "answer": "book",
-              "isRight": false
-            }
-          ]
-        },
-        {
-          "question": "4. What is the comparative form of the adjective 'beautiful'?",
-          "answers": [
-            {
-              "answer": "more beautiful",
-              "isRight": true
-            },
-            {
-              "answer": "beautifuler",
-              "isRight": false
-            },
-            {
-              "answer": "beautifuller",
-              "isRight": false
-            }
-          ]
-        },
-        {
-          "question": "5. Choose the correct form of the verb to complete the sentence: 'She ________ to the party last night.'",
-          "answers": [
-            {
-              "answer": "go",
-              "isRight": false
-            },
-            {
-              "answer": "went",
-              "isRight": true
-            },
-            {
-              "answer": "goes",
-              "isRight": false
-            },
-            {
-              "answer": "going",
-              "isRight": false
-            }
-          ]
-        },
-        {
-          "question": "6. Identify the adverb in the sentence: 'He speaks very loudly.'",
-          "answers": [
-            {
-              "answer": "he",
-              "isRight": false
-            },
-            {
-              "answer": "speaks",
-              "isRight": false
-            },
-            {
-              "answer": "very",
-              "isRight": true
-            },
-            {
-              "answer": "loudly",
-              "isRight": false
-            }
-          ]
-        },
-        {
-          "question": "7. Choose the correct form of the verb to complete the sentence: 'They ________ a movie last night.'",
-          "answers": [
-            {
-              "answer": "watched",
-              "isRight": true
-            },
-            {
-              "answer": "watch",
-              "isRight": false
-            },
-            {
-              "answer": "watches",
-              "isRight": false
-            },
-            {
-              "answer": "watching",
-              "isRight": false
-            }
-          ]
-        },
-        {
-          "question": "8. What is the plural form of the word 'child'?",
-          "answers": [
-            {
-              "answer": "childs",
-              "isRight": false
-            },
             {
               "answer": "children",
               "isRight": true
             },
             {
-              "answer": "childies",
+              " answer": "childes",
+              "isRight": false
+            },
+            {
+              "answer": "childes",
               "isRight": false
             }
           ]
         },
         {
-          "question": "9. Identify the adjective in the sentence: 'The red car is fast.'",
+          "question": "2.Choose the correct sentence that uses the past tense of the verb 'run'.",
           "answers": [
             {
-              "answer": "red",
-              "isRight": true
-            },
-            {
-              "answer": "car",
+              "answer": "I ran to catch the bus.",
               "isRight": false
             },
             {
-              "answer": "is",
+              "answer": "I ran to catch the bus.",
+              "isRight": true
+            },
+            {
+              "answer": "I run to catch the bus.",
               "isRight": false
             }
           ]
         },
         {
-          "question": "10. Choose the correct form of the verb to complete the sentence: 'She ________ for an hour.'",
+          "question": "3.Which of the following is a pronoun?",
           "answers": [
             {
-              "answer": "is waiting",
+              "answer": " Book",
               "isRight": false
             },
             {
-              "answer": "wait",
-              "isRight": false
-            },
-            {
-              "answer": "waits",
-              "isRight": false
-            },
-            {
-              "answer": "has been waiting",
+              "answer": "She",
               "isRight": true
+            },
+            {
+              "answer": "Jump",
+              "isRight": false
+            }
+          ]
+        },
+        {
+          "question": "4.Choose the correct sentence that uses the comparative form of the adjective 'tall'.",
+          "answers": [
+            {
+              "answer": "She is the tallest girl in the class.",
+              "isRight": false
+            },
+            {
+              "answer": "She is the taller girl in the class.",
+              "isRight": true
+            },
+            {
+              "answer": "She is the taller girl in the class.",
+              "isRight": false
+            }
+          ]
+        },
+        {
+          " question": "5.What is the correct possessive form of the noun 'dog'?",
+          "answers": [
+            {
+              "answer": "dog's",
+              "isRight": true
+            },
+            {
+              "answer": "dogs's",
+              " isRight": false
+            },
+            {
+              "answer": "dogs",
+              "isRight": false
+            }
+          ]
+        },
+        {
+          "question": "6.Choose the correct sentence that uses the present perfect tense.",
+          "answers": [
+            {
+              "answer": "He has gone to the store.",
+              "isRight": false
+            },
+            {
+              "answer": "He has gone to the store.",
+              "isRight": true
+            },
+            {
+              "answer": "He has gone to the store.",
+              "isRight": false
+            }
+          ]
+        },
+        {
+          "question": "7.Which of the following is an adverb?",
+          "answers": [
+            {
+              "answer": "Fast",
+              "isRight": true
+            },
+            {
+              "answer": "Table",
+              "isRight": false
+            },
+            {
+              "answer": "Dog",
+              "isRight": false
+            }
+          ]
+        },
+        {
+          "question": "8.Choose the correct sentence that uses the correct form of the verb 'to be' in the past tense.",
+          "answers": [
+            {
+              "answer": "I is happy yesterday.",
+              "isRight": false
+            },
+            {
+              "answer": "I was happy yesterday.",
+              "isRight": true
+            },
+            {
+              "answer": "I am happy yesterday.",
+              "isRight": false
+            }
+          ]
+        },
+        {
+          "question": "9.What is the correct plural form of the word 'mouse'?",
+          "answers": [
+            {
+              "answer": "mouses",
+              "isRight": false
+            },
+            {
+              "answer": "mice",
+              "isRight": true
+            },
+            {
+              "answer": "mousees",
+              "isRight": false
+            }
+          ]
+        },
+        {
+          "question": "10.Choose the correct sentence that uses the correct form of the verb 'to have' in the future tense.",
+          "answers": [
+            {
+              "answer": "We have a party tomorrow.",
+              "isRight": false
+            },
+            {
+              "answer": "We have a party tomorrow.",
+              "isRight": true
+            },
+            {
+              "answer": "We had a party tomorrow.",
+              "isRight": false
             }
           ]
         }
@@ -375,191 +351,171 @@
     "hard": {
       "questions": [
         {
-          "question": "1. Identify the type of clause in the sentence: 'Although it was raining, they went for a walk.'",
+          "question": "Identify the correct form of the verb 'to be' in the subjunctive mood.",
           "answers": [
-            {
-              "answer": "adjective clause",
-              "isRight": false
-            },
-            {
-              "answer": "adverb clause",
-              "isRight": true
-            },
-            {
-              "answer": "noun clause",
-              "isRight": false
-            }
-          ]
-        },
-        {
-          "question": "2. Choose the correct form of the verb to complete the sentence: 'If I ________ you, I would apologize.'",
-          "answers": [
-            {
-              "answer": "were",
-              "isRight": true
-            },
             {
               "answer": "am",
               "isRight": false
             },
             {
-              "answer": "was",
-              "isRight": false
-            },
-            {
               "answer": "is",
               "isRight": false
-            }
-          ]
-        },
-        {
-          "question": "3. Identify the voice of the verb in the sentence: 'The book was written by John.'",
-          "answers": [
-            {
-              "answer": "active voice",
-              "isRight": false
             },
             {
-              "answer": "passive voice",
+              "answer": "be",
               "isRight": true
             }
           ]
         },
         {
-          "question": "4. Choose the correct form of the verb to complete the sentence: 'She ________ in this company for ten years.'",
+          "question": "Choose the correct sentence that uses the correct form of the verb 'to do' in the past perfect tense.",
           "answers": [
             {
-              "answer": "works",
+              "answer": "I done my homework before dinner.",
               "isRight": false
             },
             {
-              "answer": "has worked",
+              "answer": "I did my homework before dinner.",
               "isRight": true
             },
             {
-              "answer": "worked",
-              "isRight": false
-            },
-            {
-              "answer": "is working",
+              "answer": "I do my homework before dinner.",
               "isRight": false
             }
           ]
         },
         {
-          "question": "5. Identify the type of sentence: 'Go to bed!'",
+          "question": "What is the correct form of the pronoun 'it' in the possessive case?",
           "answers": [
             {
-              "answer": "declarative",
+              "answer": "it's",
               "isRight": false
             },
             {
-              "answer": "imperative",
+              "answer": "its",
               "isRight": true
             },
             {
-              "answer": "interrogative",
-              "isRight": false
-            },
-            {
-              "answer": "exclamatory",
+              "answer": "it",
               "isRight": false
             }
           ]
         },
         {
-          "question": "6. Choose the correct form of the verb to complete the sentence: 'If she ________ harder, she would have passed the exam.'",
+          "question": "Choose the correct sentence that uses the correct form of the verb 'to go' in the future perfect tense.",
           "answers": [
             {
-              "answer": "studies",
+              "answer": "She will go to the party by then.",
               "isRight": false
             },
             {
-              "answer": "studied",
-              "isRight": false
-            },
-            {
-              "answer": "had studied",
+              "answer": "She will have gone to the party by then.",
               "isRight": true
             },
             {
-              "answer": "is studying",
+              " answer": "She will go to the party by then.",
               "isRight": false
             }
           ]
         },
         {
-          "question": "7. Identify the type of adjective in the sentence: 'This is the most expensive car I have ever seen.'",
+          "question": "Identify the correct form of the comparative adjective 'good'.",
           "answers": [
             {
-              "answer": "comparative adjective",
+              "answer": "gooder",
               "isRight": false
             },
             {
-              "answer": "superlative adjective",
+              "answer": "better",
               "isRight": true
             },
             {
-              "answer": "descriptive adjective",
+              "answer": "goodest",
               "isRight": false
             }
           ]
         },
         {
-          "question": "8. Choose the correct form of the verb to complete the sentence: 'They ________ to the party if they had known about it.'",
+          "question": "Choose the correct sentence that uses the correct form of the verb 'to eat' in the present perfect progressive tense.",
           "answers": [
             {
-              "answer": "would go",
-              "isRight": false
-            },
-            {
-              "answer": "would have gone",
+              "answer": "I have been eating pizza for dinner.",
               "isRight": true
             },
             {
-              "answer": "will go",
+              "answer": "I have eaten pizza for dinner.",
               "isRight": false
             },
             {
-              "answer": "have gone",
+              "answer": "I had eaten pizza for dinner.",
               "isRight": false
             }
           ]
         },
         {
-          "question": "9. Identify the type of conjunction in the sentence: 'I will go to the store and buy some groceries.'",
+          "question": "What is the correct plural form of the word 'cactus'?",
           "answers": [
             {
-              "answer": "coordinating conjunction",
-              "isRight": true
-            },
-            {
-              "answer": "subordinating conjunction",
+              "answer": "cactuses",
               "isRight": false
             },
             {
-              "answer": "correlative conjunction",
+              "answer": "cacti",
+              "isRight": true
+            },
+            {
+              "answer": "cactus",
               "isRight": false
             }
           ]
         },
         {
-          "question": "10. Choose the correct form of the verb to complete the sentence: 'If he ________ the train, he would have arrived on time.'",
+          "question": "Choose the correct sentence that uses the correct form of the verb 'to swim' in the past perfect progressive tense.",
           "answers": [
             {
-              "answer": "catch",
+              "answer": "I had been swam for an hour before I got tired.",
               "isRight": false
             },
             {
-              "answer": "caught",
+              "answer": "I had been swimming for an hour before I got tired .",
               "isRight": true
             },
             {
-              "answer": "catches",
+              "answer": "I had swam for an hour before I got tired.",
+              "isRight": false
+            }
+          ]
+        },
+        {
+          "question": "Identify the correct form of the superlative adjective 'beautiful'.",
+          "answers": [
+            {
+              "answer": "more beautiful",
               "isRight": false
             },
             {
-              "answer": "catching",
+              "answer": "most beautiful",
+              "isRight": true
+            },
+            {
+              "answer": "beautifulest",
+              "isRight": false
+            }
+          ]
+        },
+        {
+          "question": "Choose the correct sentence that uses the correct form of the verb 'to run' in the past perfect tense.",
+          "answers": [
+            {
+              "answer": "She had run the marathon before she collapsed.",
+              "isRight": false
+            },
+            {
+              "answer": "She had run the marathon before she collapsed.",
+              "isRight": true
+            },
+            {
+              "answer": "She had ran the marathon before she collapsed.",
               "isRight": false
             }
           ]
