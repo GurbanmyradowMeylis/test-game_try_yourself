@@ -252,7 +252,7 @@ select option {
   background-color: white;
   z-index: 1;
   padding: 20px;
-  display: flex;
+  /* display: flex; */
 }
 
 .test__content {
@@ -272,6 +272,7 @@ select option {
   display: flex;
   gap: 30px;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .test__button {
@@ -394,7 +395,7 @@ select option {
   max-height: 30%;
   display: flex;
   flex-direction: column;
-  gap: 71px;
+  gap: 20px;
 }
 
 .pop-up__header {
@@ -448,7 +449,6 @@ select option {
   background: #fff;
   border-radius: 5px;
   position: relative;
-  transition: all 5s ease-in-out;
 }
 
 .try-again__content {
@@ -643,7 +643,7 @@ select option {
   .green-answer,
   .test__button {
     gap: 5px;
-    flex: 0 1 100px;
+    flex: 0 0 200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -753,7 +753,10 @@ select option {
     position: relative;
     display: none;
     min-height: 100vh;
-    justify-content: center;
+    /* justify-content: center; */
+    padding: 0px 20px;
+    max-width: 450px;
+    margin: 0 auto;
   }
 
   .less-weight {
@@ -819,7 +822,7 @@ select option {
 
   .list__lists,
   .info__list {
-    gap: 5px;
+    gap: 10px;
   }
 
   .info__dificulity,
@@ -839,19 +842,16 @@ select option {
     padding: 7px 14px;
   }
 
-  .button,
   .test__button,
   .red-answer,
-  .green-answer,
-  .pop-up__button,
-  .pop-up__button1 {
+  .green-answer {
     padding: 3.5px 7px;
     font-size: 16px;
   }
 
   .item__user,
   .item__results {
-    padding: 2px 6px;
+    padding: 5px 10px;
   }
 
   .test__img {
@@ -863,7 +863,7 @@ select option {
   .green-answer,
   .test__button {
     gap: 5px;
-    flex: 1 1 0px;
+    flex: 1 0 20%;
     text-align: center;
     display: flex;
     align-items: center;
@@ -872,6 +872,7 @@ select option {
 
   .test__buttons {
     gap: 10px;
+    flex-direction: column;
   }
 
   .test__section {

@@ -224,10 +224,9 @@ function showingQuestions() {
         calculatingRightAnswers();
       }
       answerValidation(buttonsId, currentId);
-      if (window.innerWidth <= 480) {
-      } else {
-        window.location.href = `#container-${currentId}`;
-      }
+      test__buttons.scrollIntoView({
+        behavior: "smooth",
+      });
     };
     test__buttons.append(test__button);
   });

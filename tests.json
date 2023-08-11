@@ -184,7 +184,7 @@
               "isRight": true
             },
             {
-              " answer": "childes",
+              "answer": "childes",
               "isRight": false
             },
             {
@@ -194,18 +194,18 @@
           ]
         },
         {
-          "question": "2.Choose the correct sentence that uses the past tense of the verb 'run'.",
+          "question": "2.Choose the past form of 'run'",
           "answers": [
             {
-              "answer": "I ran to catch the bus.",
+              "answer": "runed",
               "isRight": false
             },
             {
-              "answer": "I ran to catch the bus.",
+              "answer": "ran",
               "isRight": true
             },
             {
-              "answer": "I run to catch the bus.",
+              "answer": "run",
               "isRight": false
             }
           ]
@@ -214,7 +214,7 @@
           "question": "3.Which of the following is a pronoun?",
           "answers": [
             {
-              "answer": " Book",
+              "answer": "Book",
               "isRight": false
             },
             {
@@ -228,24 +228,24 @@
           ]
         },
         {
-          "question": "4.Choose the correct sentence that uses the comparative form of the adjective 'tall'.",
+          "question": "4.Choose the comparative form of the adjective 'tall'.",
           "answers": [
             {
-              "answer": "She is the tallest girl in the class.",
+              "answer": "tallest",
               "isRight": false
             },
             {
-              "answer": "She is the taller girl in the class.",
+              "answer": "taller",
               "isRight": true
             },
             {
-              "answer": "She is the taller girl in the class.",
+              "answer": "tally",
               "isRight": false
             }
           ]
         },
         {
-          " question": "5.What is the correct possessive form of the noun 'dog'?",
+          "question": "5.What is the correct possessive form of the noun 'dog'?",
           "answers": [
             {
               "answer": "dog's",
@@ -253,7 +253,7 @@
             },
             {
               "answer": "dogs's",
-              " isRight": false
+              "isRight": false
             },
             {
               "answer": "dogs",
@@ -262,24 +262,24 @@
           ]
         },
         {
-          "question": "6.Choose the correct sentence that uses the present perfect tense.",
+          "question": "6.Choose the present perfect form of have",
           "answers": [
             {
-              "answer": "He has gone to the store.",
+              "answer": "had/have",
               "isRight": false
             },
             {
-              "answer": "He has gone to the store.",
+              "answer": "has/have",
               "isRight": true
             },
             {
-              "answer": "He has gone to the store.",
+              "answer": "had/has",
               "isRight": false
             }
           ]
         },
         {
-          "question": "7.Which of the following is an adverb?",
+          "question": "7.Which is the an adjective?",
           "answers": [
             {
               "answer": "Fast",
@@ -296,18 +296,18 @@
           ]
         },
         {
-          "question": "8.Choose the correct sentence that uses the correct form of the verb 'to be' in the past tense.",
+          "question": "8.Choose the correct form of 'to be' in the past tense.",
           "answers": [
             {
-              "answer": "I is happy yesterday.",
+              "answer": "is/are",
               "isRight": false
             },
             {
-              "answer": "I was happy yesterday.",
+              "answer": "was/were",
               "isRight": true
             },
             {
-              "answer": "I am happy yesterday.",
+              "answer": "am/been",
               "isRight": false
             }
           ]
@@ -330,18 +330,18 @@
           ]
         },
         {
-          "question": "10.Choose the correct sentence that uses the correct form of the verb 'to have' in the future tense.",
+          "question": "10.Which is the modal verb'?",
           "answers": [
             {
-              "answer": "We have a party tomorrow.",
+              "answer": "have",
               "isRight": false
             },
             {
-              "answer": "We have a party tomorrow.",
+              "answer": "must",
               "isRight": true
             },
             {
-              "answer": "We had a party tomorrow.",
+              "answer": "able",
               "isRight": false
             }
           ]
@@ -351,112 +351,112 @@
     "hard": {
       "questions": [
         {
-          "question": "Identify the correct form of the verb 'to be' in the subjunctive mood.",
+          "question": "1.What is the future form of possibility",
           "answers": [
             {
-              "answer": "am",
+              "answer": "able to",
               "isRight": false
             },
             {
-              "answer": "is",
+              "answer": "could",
               "isRight": false
             },
             {
-              "answer": "be",
+              "answer": "can",
               "isRight": true
             }
           ]
         },
         {
-          "question": "Choose the correct sentence that uses the correct form of the verb 'to do' in the past perfect tense.",
+          "question": "2.Choose correct form of present perfect",
           "answers": [
             {
-              "answer": "I done my homework before dinner.",
+              "answer": "S+has+V3",
               "isRight": false
             },
             {
-              "answer": "I did my homework before dinner.",
+              "answer": "S+have/has+V3",
               "isRight": true
             },
             {
-              "answer": "I do my homework before dinner.",
+              "answer": "S+had+V3",
               "isRight": false
             }
           ]
         },
         {
-          "question": "What is the correct form of the pronoun 'it' in the possessive case?",
+          "question": "3.Which is the modal of deduction",
           "answers": [
             {
-              "answer": "it's",
+              "answer": "have to",
               "isRight": false
             },
             {
-              "answer": "its",
+              "answer": "may",
               "isRight": true
             },
             {
-              "answer": "it",
+              "answer": "mustn't",
               "isRight": false
             }
           ]
         },
         {
-          "question": "Choose the correct sentence that uses the correct form of the verb 'to go' in the future perfect tense.",
+          "question": "4.Which is the correct form of past simple",
           "answers": [
             {
-              "answer": "She will go to the party by then.",
+              "answer": "S+V1",
               "isRight": false
             },
             {
-              "answer": "She will have gone to the party by then.",
+              "answer": "S+V2",
               "isRight": true
             },
             {
-              " answer": "She will go to the party by then.",
+              "answer": "S+V3",
               "isRight": false
             }
           ]
         },
         {
-          "question": "Identify the correct form of the comparative adjective 'good'.",
+          "question": "5.Which is the comparative of 'big'",
           "answers": [
             {
-              "answer": "gooder",
+              "answer": "biglier",
               "isRight": false
             },
             {
-              "answer": "better",
+              "answer": "biggest",
+              "isRight": false
+            },
+            {
+              "answer": "bigger",
+              "isRight": true
+            }
+          ]
+        },
+        {
+          "question": "6.Choose the correct present perfect form ",
+          "answers": [
+            {
+              "answer": "S+have/has+V3",
               "isRight": true
             },
             {
-              "answer": "goodest",
+              "answer": "S+have/has+V2",
+              "isRight": false
+            },
+            {
+              "answer": "S+have/has+V1",
               "isRight": false
             }
           ]
         },
         {
-          "question": "Choose the correct sentence that uses the correct form of the verb 'to eat' in the present perfect progressive tense.",
+          "question": "7.What is the correct plural form of the word 'cactus'?",
           "answers": [
             {
-              "answer": "I have been eating pizza for dinner.",
-              "isRight": true
-            },
-            {
-              "answer": "I have eaten pizza for dinner.",
-              "isRight": false
-            },
-            {
-              "answer": "I had eaten pizza for dinner.",
-              "isRight": false
-            }
-          ]
-        },
-        {
-          "question": "What is the correct plural form of the word 'cactus'?",
-          "answers": [
-            {
-              "answer": "cactuses",
+              "answer": "cactuss",
               "isRight": false
             },
             {
@@ -470,52 +470,52 @@
           ]
         },
         {
-          "question": "Choose the correct sentence that uses the correct form of the verb 'to swim' in the past perfect progressive tense.",
+          "question": "8.Fill the word that skipped. He has ____ to school",
           "answers": [
             {
-              "answer": "I had been swam for an hour before I got tired.",
+              "answer": "goed",
               "isRight": false
             },
             {
-              "answer": "I had been swimming for an hour before I got tired .",
+              "answer": "gone",
               "isRight": true
             },
             {
-              "answer": "I had swam for an hour before I got tired.",
+              "answer": "went",
               "isRight": false
             }
           ]
         },
         {
-          "question": "Identify the correct form of the superlative adjective 'beautiful'.",
+          "question": "9.Fill the word that skipped. The bank was ____ yesterday",
           "answers": [
             {
-              "answer": "more beautiful",
+              "answer": "steal",
               "isRight": false
             },
             {
-              "answer": "most beautiful",
+              "answer": "stole",
               "isRight": true
             },
             {
-              "answer": "beautifulest",
+              "answer": "stolen",
               "isRight": false
             }
           ]
         },
         {
-          "question": "Choose the correct sentence that uses the correct form of the verb 'to run' in the past perfect tense.",
+          "question": "10. Which word is an adverb in the sentence: 'Unfortunately, He lost last game'?",
           "answers": [
             {
-              "answer": "She had run the marathon before she collapsed.",
+              "answer": "unfortunate",
               "isRight": false
             },
             {
-              "answer": "She had run the marathon before she collapsed.",
+              "answer": "unfortunately",
               "isRight": true
             },
             {
-              "answer": "She had ran the marathon before she collapsed.",
+              "answer": "fortunately",
               "isRight": false
             }
           ]
