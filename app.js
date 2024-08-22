@@ -1,4 +1,7 @@
-import data from "./tests.json" assert { type: "json" };
+import data from "./tests.json" with { type: "json" };
+
+console.log(data);
+
 
 let users = [],
   currentUser = "",
@@ -191,7 +194,10 @@ function checkingUserProperty(property) {
 
 // ! showes tests
 function showingQuestions() {
-  let item = gettingCurrentTest()[currentId];
+  let arr = gettingCurrentTest()
+  let item = arr[currentId];
+console.log(item, arr,currentId,arr[currentId]);
+
   let test__content = document.getElementsByClassName("test__content").item(0);
   let test__section = document.createElement("div");
   let test__question = document.createElement("h1");
@@ -261,12 +267,17 @@ function answerValidation(id) {
 }
 
 // ! getting static difficulties array from json
-function gettingCurrentTest() {
+ function gettingCurrentTest() {
   if (currentDificulity === "easy") {
+    console.log(data.tests.easy.questions);
     return data.tests.easy.questions;
-  } else if (currentDificulity === "medium") {
+  }
+   if (currentDificulity === "medium") {
+    console.log(data.tests.medium.questions);
     return data.tests.medium.questions;
-  } else if (currentDificulity === "hard") {
+  } 
+   if (currentDificulity === "hard") {
+    console.log(data.tests.medium.questions);
     return data.tests.hard.questions;
   }
 }
